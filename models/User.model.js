@@ -5,15 +5,26 @@ const userSchema = new Schema(
   {
     username: {
       type: String,
-      // unique: true -> Ideally, should be unique, but its up to you
+      trim: true,
+      required: [true, 'Username is required.'],
     },
-    password: String,
-  },
-  {
-    // this second object adds extra properties: `createdAt` and `updatedAt`
-    timestamps: true,
-  }
-);
+    email: {
+      type: String,
+      trim: true,
+      required: [true, 'email is required.'],
+      unique: true
+    },
+    passwordHash: {
+      type: String,
+      trim: true,
+      required: [true, 'password is required.'],
+    },
+    premium: { type: Boolean, default: false },
+    paymentToken: {type: String, default:""},
+    coins: { type: Number, default: 0 },
+    // favorites: [{ type: Schema.Types.ObjectId, ref: 'Game' }],
+
+  }, { timestamps: true, });
 
 const User = model("User", userSchema);
 

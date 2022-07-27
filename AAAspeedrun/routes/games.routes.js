@@ -6,7 +6,12 @@ const speedrun = new SpeedrunClient()
 const router = require("express").Router();
 
 router.get("/", (req, res, next) => {
-  res.render('games')
+    speedrun.games.get('76r335l6')
+    .then((gamefromAPI)=>{
+        res.render("games",{game:gamefromAPI});
+        console.log(gamefromAPI)
+    })
+    
   });
 
 router.get("/new",(req,res,next)=>{
