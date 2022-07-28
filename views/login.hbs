@@ -9,6 +9,9 @@
 <label>
     password<input type="password" name="password">
 </label>
+<label>
+    confirm password <input type="password" name="confirmPassword">
+</label>
 <button type="submit">SIGN UP</button>
 </form>
 
@@ -26,3 +29,7 @@
 </label>
 <button type="submit">LOG IN</button>
 </form>
+
+{{#if errorMessage}}
+<p>{{errorMessage}}</p>
+{{/if}}
