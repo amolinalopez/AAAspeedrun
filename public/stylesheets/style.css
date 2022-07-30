@@ -1,35 +1,133 @@
-body{
-  background-color: #363636;
-  color: white;
-  font-family: 'Barlow Condensed', sans-serif;
+h1{
+  color: rgb(197, 202, 200);
+}
+
+*{
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
-#logo {
-  width: 160px;
+body{
+  font-size: 18px;
+  font-family: sans-serif;
+  color: #F2E3CF;
 }
-
-#medal {
-  width: 40px;
-}
-
-.container {
-  display: block;
-    margin: 0px;
-    background-color: #1b4841;
-    padding: 10px;
-    color : rgb(255, 255, 255);
-    font-size: 20px;
-}
-
-nav ul {
-  list-style: none;
+.container{
+  /* height: 100vh; */
+  /* padding-top: 130px; */
   display: flex;
+  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  margin: auto;
+  background-color: #222323;
+  /* padding-left: 40px;
+  padding-right: 40px; */
+  padding: 120px;
+
 }
 
-li{
-font-weight: 100;
-font-size: 16px;
+
+
+
+
+/* DESKTOP */
+.navbar-desktop {
+  background-color: #2C3231;
+  padding: 10px;
+  height: 100px;
+  line-height: 80px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
 }
+
+.navbar-desktop a {
+  padding: 20px;
+  color: #F2E3CF;
+  font-size: 24px;
+}
+
+.navbar-desktop input {
+  font-size: 24px;
+  height: 36px;
+  border: #f7f7f7;
+  border-radius: 5px;
+}
+
+.navbar-desktop button {
+  font-size: 24px;
+  background-color: #f7f7f7;
+  padding: 2px;
+  border-radius: 5px;
+  border: #f7f7f7;
+}
+
+.navbar-desktop button:hover {
+  background-color: rgb(207, 207, 207);
+  cursor: pointer;
+}
+
+
+
+
+
+/* MOBILE */
+.navbar-mobile {
+  /* position: fixed;
+  top: 9px;
+  right: 15px;
+  color: red; */
+  display: none;
+}
+
+.navbar-mobile i {
+  position: fixed;
+  z-index: 9999;
+  top: 9px;
+  right: 15px;
+  font-size: 40px;
+  color: white;
+}
+
+.modal{
+  transition: top 0.9s;
+  background-color: rgb(116, 17, 53);
+  height: 100vh;
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  width: 100%;
+  opacity: 0.97;
+}
+
+.navbar-mobile .navbar-mobile-list {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-mobile .navbar-mobile-list a{
+  font-size: 50px;
+  font-weight: 800;
+  color: #f5f5dc;
+  padding: 20px;
+}
+.change-modal{
+  top: 0;
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width : 1050px){
+  .navbar-desktop{
+      display: none;
+  }
+  .navbar-mobile{
+      display: block;
+  }
+}
+  
