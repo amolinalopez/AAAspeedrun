@@ -19,6 +19,11 @@ router.get("/about", (req, res, next) => {
   res.render("about");
 })
 
+/* GET error page */
+router.get("/error", (req, res, next) => {
+  res.render("error");
+})
+
 
 /* GET login page */
 const bcryptjs = require('bcryptjs');

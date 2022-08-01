@@ -1,52 +1,28 @@
-h1{
-  color: rgb(197, 202, 200);
-}
-
-*{
-  margin: 0;
+body {
   padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-body{
+  margin: 0;
   font-size: 18px;
   font-family: sans-serif;
-  color: #F2E3CF;
-}
-.container{
-  /* height: 100vh; */
-  /* padding-top: 130px; */
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  color: #f2e3cf;
   background-color: #222323;
-  /* padding-left: 40px;
-  padding-right: 40px; */
-  padding: 120px;
-
 }
-
-
-
-
 
 /* DESKTOP */
 .navbar-desktop {
-  background-color: #2C3231;
-  padding: 10px;
-  height: 100px;
-  line-height: 80px;
+  background-color: #2c3231;
+  padding: 5px;
+  height: 70px;
   text-align: center;
   position: fixed;
   width: 100%;
+  z-index:1;
 }
 
 .navbar-desktop a {
-  padding: 20px;
-  color: #F2E3CF;
+  padding: 10px;
+  color: #f2e3cf;
   font-size: 24px;
+  text-decoration: none;
 }
 
 .navbar-desktop input {
@@ -65,23 +41,18 @@ body{
 }
 
 .navbar-desktop button:hover {
-  background-color: rgb(207, 207, 207);
+  background-color: rgb(74, 152, 171);
   cursor: pointer;
 }
 
-
-
-
-
 /* MOBILE */
 .navbar-mobile {
-  /* position: fixed;
-  top: 9px;
-  right: 15px;
-  color: red; */
   display: none;
+  margin-bottom: 1px;
 }
-
+.navbar-mobile a {
+  text-decoration: none;
+}
 .navbar-mobile i {
   position: fixed;
   z-index: 9999;
@@ -89,9 +60,9 @@ body{
   right: 15px;
   font-size: 40px;
   color: white;
+  text-decoration: none;
 }
-
-.modal{
+.modal {
   transition: top 0.9s;
   background-color: rgb(116, 17, 53);
   height: 100vh;
@@ -100,6 +71,7 @@ body{
   left: 0;
   width: 100%;
   opacity: 0.97;
+  z-index:1;
 }
 
 .navbar-mobile .navbar-mobile-list {
@@ -110,24 +82,217 @@ body{
   justify-content: center;
 }
 
-.navbar-mobile .navbar-mobile-list a{
+.navbar-mobile .navbar-mobile-list a {
   font-size: 50px;
   font-weight: 800;
   color: #f5f5dc;
   padding: 20px;
 }
-.change-modal{
+.change-modal {
   top: 0;
 }
 
 
+
+/* CONTAINERS */
+.container {
+  padding: 50px;
+  padding-top: 150px;
+  color: beige;
+  display: flex;
+}
+
+
+
+/* HOMEPAGE */
+.homepage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: flex-start;
+}
+
+.boite-run {
+  border: solid #398888;
+  border-radius: 20px;
+}
+
+.boite-run .img-jeu  {
+  display: block;
+  width: 178px;
+  height: 124px;
+  object-fit: cover;
+  border-radius: 20px;
+
+}
+
+.boite-run h3 {
+  text-align: center;
+}
+
+.boite-run h5 {
+  text-align:left;
+  padding-left: 5px;
+}
+
+
+/* ERRROR PAGE */
+.error {
+  padding: 0px;
+  padding-top: 100px;
+
+  text-align: center;
+  color: white;
+}
+/* error image */
+#error {
+  width: 100vw;
+}
+
+.error a {
+  color: #f2e3cf;
+  text-decoration: none;
+  position: absolute;
+
+  bottom: 8px;
+  right: 16px;
+}
+
+
+
+
+
+
 /* MEDIA QUERIES */
-@media screen and (max-width : 1050px){
-  .navbar-desktop{
-      display: none;
+@media screen and (max-width: 1050px) {
+  .navbar-desktop {
+    display: none;
   }
-  .navbar-mobile{
-      display: block;
+  .navbar-mobile {
+    display: block;
   }
 }
-  
+
+
+
+
+
+
+
+
+
+:root {
+  --surface-color: rgb(99, 99, 99);
+}
+
+.home {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.cards {
+  display: grid;
+  padding: 0;
+  margin: 0;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  list-style-type: none;
+}
+
+.card {
+  position: relative;
+  display: block;
+  height: 300px;  
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.card__image {      
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;      
+  border-radius: 10px;    
+  background-color: var(--surface-color);      
+  transform: translateY(100%);
+  transition: .2s ease-in-out;
+}
+
+.card:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  /* ici pour changer taille detail area */
+  padding: 20px;
+  background-color: var(--surface-color);
+  transform: translateY(-100%);
+  transition: .2s ease-in-out;
+}
+
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;      
+  z-index: 1;
+}
+
+.card__arc path {
+  fill: var(--surface-color);
+  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}       
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+/* img user */
+.card__avatar {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;      
+  border-radius: 50%;      
+}
+
+.card__userName {
+  font-size: 1em;
+  margin: 0 0 .3em;
+  color: #6A515E;
+}
+
+.card__tagline {
+  display: block;
+  margin: 1em 0;
+  font-family: "MockFlowFont";  
+  font-size: .8em; 
+  color: #D7BDCA;  
+}
+
+.card__status {
+  font-size: .8em;
+  color: #D7BDCA;
+}
+
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  color: #D7BDCA;
+  font-family: "MockFlowFont";   
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}    

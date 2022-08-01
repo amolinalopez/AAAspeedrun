@@ -2,12 +2,12 @@ const { Schema, model } = require("mongoose");
 
 const runSchema = new Schema(
   {
-_id:{type:Schema.Types.ObjectId},
-userID:{type:Schema.Types.ObjectId},
-time_ms:Number,
+id:String,
+userID:String,
+time_seconds:Number,
 date:Date,
-proof_url:String,
-category:{type:Schema.Types.ObjectId},
+video:String,
+category:String,
 
   }, { timestamps: true, });
 
