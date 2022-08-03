@@ -1,73 +1,86 @@
-<!DOCTYPE html>
 <html lang="en">
 
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      
-      <link rel="stylesheet" href="/stylesheets/style.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-      <title>{{AAA}}</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="icon" type="image/png" href="images/trioBears.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <title>AAA</title>
 
-   </head>
+  </head>
 
-   <body>
+  <body>
+
+    <div id="NAVBAR">
       <!-- navbar Mobile -->
-<div class="navbar-mobile">
-  <i class="fas fa-bars"></i>
+      <div class="navbar-mobile">
+        <i class="fas fa-bars"></i>
 
-  <div class="modal">
-    <div class="navbar-mobile-list">
-      <a href="">
-        <img
-          id="logoSymbol"
-          src="/images/logoSymbol.svg"
-          alt="logoSymbol"
-          width="100px"
-        />
-      </a>
-      <a href="#">GAMES</a>
-      <a href="#">LOGIN SIGN UP</a>
-      <a href="#">SEARCH 🔍</a>
-      <a href="#">PREMIUM</a>
-      <a href="#">ABOUT</a>
+        <div class="modal">
+          <div class="navbar-mobile-list">
+            <a href="/">
+              <img
+                id="logoSymbol"
+                src="/images/logoSymbol.svg"
+                alt="logoSymbol"
+                width="100px"
+              />
+            </a>
+            <a href="#">GAMES</a>
+            <a href="#">LOGIN SIGN UP</a>
+            <a href="#">SEARCH 🔍</a>
+            <a href="#">PREMIUM</a>
+            <a href="#">ABOUT</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- navbar Desktop -->
+      <div class="navbar-desktop">
+        <a href="/">
+          <img src="/images/logoBam.svg" alt="logo" width="180px" />
+        </a>
+        <a href="/games">GAMES</a>
+        <a href="#">
+          <img src="/images/medal.svg" alt="premium Subscribe" width="40px" />
+        </a>
+        <input type="search" />
+        <button>🔍</button>
+        <a href="/about">ABOUT</a>
+        <a href="/contact">CONTACT</a>
+        <button>
+          <a href="login">Log In Sign In</a>
+        </button>
+
+      </div>
+
     </div>
-  </div>
-</div>
 
+    {{{body}}}
 
+    <script src="/js/cssPage.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/gameslist.js"></script>
 
-<!-- navbar Desktop -->
-<div class="navbar-desktop">
-  <a href="#">
-    <img src="/images/logoBam.svg" alt="logo" width="180px" />
-  </a>
-  <a href="#">GAMES</a>
-  <a href="#">
-    <img src="/images/medal.svg" alt="premium Subscribe" width="40px" />
-  </a>
-  <input type="search" />
-  <button>🔍</button>
-  <a href="#">ABOUT</a>
-  <a href="#">CONTACT</a>
-  <button>
-      <a href="#">Log In  Sign In</a>
-  </button>
-
-</div>
-
-
-      {{{body}}}
-      <script src="/js/cssPage.js"></script>  
-      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-      <script src="/js/script.js"></script>
-      <script src="/js/gameslist.js"></script>
-
-   </body>
+  </body>
 
 </html>
