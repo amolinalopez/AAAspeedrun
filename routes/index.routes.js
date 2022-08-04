@@ -1,12 +1,17 @@
 const router = require("express").Router();
 const axios = require("axios")
+const Runs=require('../models/Run.model.js')
 
 /* GET home page */
 router.get("/", (req, res, next) => {
-  axios.get('https://speedrun.com/api/v1/runs?max=6&status=verified&orderby=verify-date&direction=desc')
-    .then((runResponse) => {
-      res.render("homepage", { run: runResponse.data.data });
-    })
+  console.log("runs",Runs)
+  Runs.find().sort({date:-1}).limit(20)
+  // .populate("category")
+  // .populate("category.gameID")
+  .then(allRunsFromDB=>{
+    console.log("allRunsFromDB:",allRunsFromDB)
+    res.render("homepage",{runs:allRunsFromDB})
+  })
     .catch(err => {
       console.log("error:", err)
       next(err)

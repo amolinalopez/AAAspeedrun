@@ -6,6 +6,8 @@ id:String,
 title:String,
 year:Number,
 platforms:Array,
+cover:Object,
+categories:Array,
 
   }, { timestamps: true, });
 

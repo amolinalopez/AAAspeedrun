@@ -8,7 +8,7 @@ function fetch(){
     const promises = []
 
     for(let i=0;i<=30;i++){
-        const p = axios.get(`https://www.speedrun.com/api/v1/games?offset=${i*1000}&max=1000&orderby=released&direction=desc`)
+        const p = axios.get(`https://www.speedrun.com/api/v1/games?offset=${i*1000}&max=1000&orderby=released&direction=desc&embed=categories`)
         
        
             .then((response)=>{

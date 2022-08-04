@@ -3,13 +3,19 @@ const Game = require("../models/Game.model")
 const MONGO_URI = process.env.MONGODB_URI || "mongodb://localhost/AAAspeedrun";
 const gamesData = require('../data/games.json')
 const games = gamesData.filter((el) => el).map((el) => {
+    for (let i=0; i<el.categories.data.length; i++){
+        console.log(el.categories.data[i].id)
     return {
+        id:el.id,
         title: el.names.international,
         year: el.released,
-        platforms: el.platforms
+        platforms: el.platforms,
+        cover:el.assets['cover-large'].uri,
+        categories:[el.categories.data[i].id]
     }
+}
 })
-
+console.log()
 //fonction asynchone pour l'accès a la DB
 async function main() {
     //connection a mongoose
@@ -38,4 +44,4 @@ async function main() {
 
 
 //on oublie pas d'appeler la fonction qu'on vient de créer!
-main()
+main().catch(err => console.log(err))

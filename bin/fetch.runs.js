@@ -8,8 +8,6 @@ const fs=require("fs")
 
 
 function fetch(){
-    let json = []
-
     const promises = []
 
     for(let i=0;i<=49;i++){

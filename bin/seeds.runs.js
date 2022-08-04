@@ -14,6 +14,9 @@ const runs = runsData.filter((el) => {
   }
 })
 
+
+
+
 //fonction asynchone pour l'accès a la DB
 async function main() {
     //connection a mongoose
@@ -39,7 +42,6 @@ async function main() {
       console.log(`An error occurred while creating runs from the DB: ${err}`)
     );
   }
-  
   
   //on oublie pas d'appeler la fonction qu'on vient de créer!
   main().catch(err => console.log(err))
