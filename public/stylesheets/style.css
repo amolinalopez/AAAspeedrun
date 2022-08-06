@@ -610,3 +610,17 @@ $$\   $$ |
     background-size: contain;
   }
 }
+/* PREMIUM */
+.premium-container {
+  width: 400px;
+  margin : auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.purchase-choice{
+}
+
+premium-choice-btn{
+}
+/* PAYMENT */

@@ -3,8 +3,12 @@ const { default: axios } = require("axios");
 const router = require("express").Router();
 
 /* GET payment page */
-router.get("/", (req, res, next) => {
+router.get("/payment", (req, res, next) => {
   res.render("payment");
+});
+
+router.get("/premium", (req, res, next) => {
+  res.render("premium");
 });
 
 router.post("/createContext", (req, res, next) => {
