@@ -380,3 +380,18 @@ footer {
 .games{
   margin: 50px;
 }
+
+/* PREMIUM */
+.premium-container {
+  width: 400px;
+  margin : auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.purchase-choice{
+}
+
+premium-choice-btn{
+}
+/* PAYMENT */
