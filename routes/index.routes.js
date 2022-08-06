@@ -29,6 +29,10 @@ router.get("/error", (req, res, next) => {
   res.render("error");
 })
 
+/* GET contact page */
+router.get("/contact", (req, res, next) => {
+  res.render("contact");
+})
 
 /* GET login page */
 const bcryptjs = require('bcryptjs');

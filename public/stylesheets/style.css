@@ -23,7 +23,7 @@ body {
   font-size: 18px;
   font-family: "Chakra Petch", sans-serif;
   color: var(--white);
-  background-image: linear-gradient(var(--background-dark), #322c32);
+  background-image: linear-gradient(var(--background-dark), #161516);
   /* background-color: var(--background-dark);; */
 }
 
@@ -40,6 +40,7 @@ body {
   width: 100%;
   z-index: 1;
   gap: 20px;
+  border-bottom: solid white;
 }
 
 .navbar-desktop a {
