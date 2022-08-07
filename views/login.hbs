@@ -1,5 +1,7 @@
-{{!-- a mettre en place --}}
-                  {{!-- $$\                       $$\ $$\                                                                 
+{{!-- font awesome : ne marche qu'avec la version 5.15.4 pas au dessus --}}
+
+
+{{!--                   $$\                       $$\ $$\                                                                 
                         \__|                      $$ |\__|                                                                
 $$$$$$\$$$$\   $$$$$$\  $$\ $$$$$$$\         $$$$$$$ |$$\ $$\    $$\                                                      
 $$  _$$  _$$\  \____$$\ $$ |$$  __$$\       $$  __$$ |$$ |\$$\  $$  |                                                     
@@ -93,36 +95,42 @@ $$$$$$$  |\$$$$$$$ |\$$$$$$$\ $$ | \$$\ \__|      $$$$$$$  |$$ |\$$$$$$$ |$$ |  
 
 
 
-<p>signup</p>
+<p>SIGN UP</p>
 <form action="/signup" method="POST">
 <label>
-    username<input type="string" name="username" >
+    username<input type="string" name="username" placeholder="your username" >
+</label> 
+<label>
+    <i class="fas fa-at"></i>
+    email<input type="email" name="email" placeholder="your e-mail" >
 </label>
 <label>
-    email<input type="email" name="email" >
+    password<input type="password" name="password" placeholder="your password">
 </label>
-<label>
-    password<input type="password" name="password">
-</label>
-<label>
+{{!-- <label>
     confirm password <input type="password" name="confirmPassword">
-</label>
-<button type="submit">SIGN UP</button>
+</label> --}}
+<i class="fas fa-eye"></i>
+<i class="fas fa-eye-slash"></i>
+<button type="submit">Sign up</button>
 </form>
 
+<br>
 
-<p>login</p>
+<p>LOG IN</p>
 <form action="/login" method="POST">
 <label>
-    username<input type="string" name="username" >
+    username <input type="string" name="username" placeholder="your username" >
+</label>
+<i class="fas fa-at"></i>
+<label>
+    email<input type="email" name="email" placeholder="your e-mail">    
+
 </label>
 <label>
-    email<input type="email" name="email" >
+    password<input type="password" name="password" placeholder="your password">
 </label>
-<label>
-    password<input type="password" name="password">
-</label>
-<button type="submit">LOG IN</button>
+<button type="submit">Log in</button>
 </form>
 
 {{#if errorMessage}}
