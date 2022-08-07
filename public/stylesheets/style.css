@@ -12,9 +12,29 @@
   /* FONTS */
   --title-font: "Chakra Petch";
   --main-font: "sans-serif";
-
-
 }
+
+/* 
+
+      $$\                                                $$\                                         
+      $$ |                                               $$ |                                        
+$$$$$$$ | $$$$$$\         $$$$$$\   $$$$$$\   $$$$$$\ $$$$$$\          $$$$$$$\  $$$$$$$\  $$$$$$$\ 
+$$  __$$ |$$  __$$\       $$  __$$\ $$  __$$\ $$  __$$\\_$$  _|        $$  _____|$$  _____|$$  _____|
+$$ /  $$ |$$ /  $$ |      $$ |  \__|$$ /  $$ |$$ /  $$ | $$ |          $$ /      \$$$$$$\  \$$$$$$\  
+$$ |  $$ |$$ |  $$ |      $$ |      $$ |  $$ |$$ |  $$ | $$ |$$\       $$ |       \____$$\  \____$$\ 
+\$$$$$$$ |\$$$$$$  |      $$ |      \$$$$$$  |\$$$$$$  | \$$$$  |      \$$$$$$$\ $$$$$$$  |$$$$$$$  |
+\_______| \______/       \__|       \______/  \______/   \____/        \_______|\_______/ \_______/ 
+                                                                                               
+                                                                                               
+                                                                                                */
+                                                                                                                                        
+                                                                                                                                                          
+                                                                                                                                                          
+
+
+
+
+
 
 body {
   padding: 0;
@@ -25,6 +45,10 @@ body {
   background-color: #161516;
   /* background-color: var(--background-dark);; */
 }
+
+
+
+
 
 
 
@@ -164,6 +188,12 @@ input::placeholder {
 } */
 
 
+
+
+
+
+
+
                                                   
 /*                                                   
   /$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$ 
@@ -202,6 +232,8 @@ input::placeholder {
 
 
 
+
+
 /* 
 /$$                                                                                
 | $$                                                                                
@@ -216,16 +248,17 @@ input::placeholder {
                                             |__/                 \______/           
  */
 
-/* HOMEPAGE */
+/* voir homepage + parallax */
 
 .home {
   box-sizing: border-box;
-  margin-inline: 150px;
+  margin-inline: 50px;
 }
 
 .home h1 {
   text-align: center;
   padding: 20px;
+  margin-top: 20px;
 
   /* NEON */
   color: #fff;
@@ -239,15 +272,15 @@ input::placeholder {
   display: grid;
   padding: 0;
   margin: 0;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 20px;
   list-style-type: none;
 }
 
 .card {
   position: relative;
   display: block;
-  height: 300px;
+  height: 270px;
   border-radius: 30px;
   overflow: hidden;
 }
@@ -326,7 +359,7 @@ input::placeholder {
 }
 
 .card__status {
-  font-size: 0.8em;
+  font-size: 18px;
   color: #dbb5df;
 }
 
@@ -347,6 +380,121 @@ input::placeholder {
     display: block;
   }
 }
+
+
+
+  /* 
+                                       /$$ /$$                           /$$                                    
+                                       | $$| $$                          | $$                                    
+  /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$ | $$| $$  /$$$$$$  /$$   /$$      | $$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$ 
+ /$$__  $$ |____  $$ /$$__  $$|____  $$| $$| $$ |____  $$|  $$ /$$/      | $$__  $$ /$$__  $$ /$$__  $$ /$$__  $$
+| $$  \ $$  /$$$$$$$| $$  \__/ /$$$$$$$| $$| $$  /$$$$$$$ \  $$$$/       | $$  \ $$| $$$$$$$$| $$  \__/| $$$$$$$$
+| $$  | $$ /$$__  $$| $$      /$$__  $$| $$| $$ /$$__  $$  >$$  $$       | $$  | $$| $$_____/| $$      | $$_____/
+| $$$$$$$/|  $$$$$$$| $$     |  $$$$$$$| $$| $$|  $$$$$$$ /$$/\  $$      | $$  | $$|  $$$$$$$| $$      |  $$$$$$$
+| $$____/  \_______/|__/      \_______/|__/|__/ \_______/|__/  \__/      |__/  |__/ \_______/|__/       \_______/
+| $$                                                                                                             
+| $$                                                                                                             
+|__/                                                                                                             
+*/
+
+/* TEST PARALLAX */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 300px;
+  /* background-color: #000; */
+}
+
+.parallax__group {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  transform-style: preserve-3d;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.full3 {
+  background: url("/images/full3.png") no-repeat center;
+  background-size: cover;
+  transform: translateZ(-600px) scale(3);
+  z-index: 1;
+}
+
+.back4 {
+  background: url("/images/layer4.png") no-repeat center;
+  background-size: cover;
+  transform: translateZ(-525px) scale(2.75);
+  z-index: 2;
+}
+
+.objets {
+  background: url("/images/layer3.png") no-repeat center;
+  background-size: cover;
+  transform: translateZ(-400px) scale(2.33333333);
+  z-index: 3;
+}
+
+.sol {
+  background: url("/images/layer2love.png") no-repeat center;
+  background-size: cover;
+  transform: translateZ(-250px) scale(1.833333333);
+  z-index: 4;
+}
+
+.cat {
+  background: url('/images/layer1.png') no-repeat center;
+  background-size: cover;
+  transform: translateZ(-125px) scale(1.4167);
+  z-index: 5;
+}
+
+.hello-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 17rem;
+  height: 25rem;
+}
+
+.hello-container h1 {
+  font-weight: 400;
+  position: absolute;
+  font-size: 12.5rem;
+}
+
+.run-container {
+  background: #000;
+}
+
+.run-container h1 {
+  padding-block: 50px;
+}
+
+@media (min-width: 2690px) {
+  .full3,
+  .back4,
+  .objets,
+  .sol,
+  .hero-text {
+    background-size: contain;
+  }
+}
+
+
 
 
 
@@ -376,6 +524,7 @@ $$  __$$ |$$ |  $$ |$$ |  $$ |$$ |  $$ | $$ |$$\
 
 .logo-contact {
   text-decoration: none;
+  
 }
 
 #logoTitre {
@@ -461,135 +610,24 @@ $$\   $$ |
 
 
 
-  /* 
-                                       /$$ /$$                           /$$                                    
-                                       | $$| $$                          | $$                                    
-  /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$ | $$| $$  /$$$$$$  /$$   /$$      | $$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$ 
- /$$__  $$ |____  $$ /$$__  $$|____  $$| $$| $$ |____  $$|  $$ /$$/      | $$__  $$ /$$__  $$ /$$__  $$ /$$__  $$
-| $$  \ $$  /$$$$$$$| $$  \__/ /$$$$$$$| $$| $$  /$$$$$$$ \  $$$$/       | $$  \ $$| $$$$$$$$| $$  \__/| $$$$$$$$
-| $$  | $$ /$$__  $$| $$      /$$__  $$| $$| $$ /$$__  $$  >$$  $$       | $$  | $$| $$_____/| $$      | $$_____/
-| $$$$$$$/|  $$$$$$$| $$     |  $$$$$$$| $$| $$|  $$$$$$$ /$$/\  $$      | $$  | $$|  $$$$$$$| $$      |  $$$$$$$
-| $$____/  \_______/|__/      \_______/|__/|__/ \_______/|__/  \__/      |__/  |__/ \_______/|__/       \_______/
-| $$                                                                                                             
-| $$                                                                                                             
-|__/                                                                                                             
-*/
-
-/* TEST PARALLAX */
-* {
-  padding: 0;
-  margin: 0;
-}
-
-.wrapper {
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  perspective: 300px;
-}
-
-.parallax__group {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  transform-style: preserve-3d;
-}
-
-.parallax__layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.full3 {
-  background: url("/images/full3.png") no-repeat center;
-  background-size: cover;
-  transform: translateZ(-600px) scale(3);
-  z-index: 1;
-}
-
-.back4 {
-  background: url("/images/layer4.png") no-repeat center;
-  background-size: cover;
-  transform: translateZ(-525px) scale(2.75);
-  z-index: 2;
-}
-
-.objets {
-  background: url("/images/layer3.png") no-repeat center;
-  background-size: cover;
-  transform: translateZ(-400px) scale(2.33333333);
-  z-index: 3;
-}
-
-.sol {
-  background: url("/images/layer2love.png") no-repeat center;
-  background-size: cover;
-  transform: translateZ(-250px) scale(1.833333333);
-  z-index: 4;
-}
-
-.cat {
-  background: url('/images/layer1.png') no-repeat center;
-  background-size: cover;
-  transform: translateZ(-125px) scale(1.4167);
-  z-index: 5;
-}
-
-.hello-container {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 17rem;
-  height: 25rem;
-}
-
-.hello-container h1 {
-  font-weight: 400;
-  position: absolute;
-  font-size: 12.5rem;
-}
-
-.run-container {
-  background: #000;
-  transform: translateZ(0) scale(1);
-  z-index: 8;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  display: grid;
-}
-
-@media (min-width: 2690px) {
-  .full3,
-  .back4,
-  .objets,
-  .sol,
-  .people2,
-  .people3,
-  .hero-text {
-    background-size: contain;
-  }
-}
 
 
 
 
 /* 
-$$$$$$$\  $$$$$$$\  $$$$$$$$\ $$\      $$\ $$$$$$\ $$\   $$\ $$\      $$\ 
-$$  __$$\ $$  __$$\ $$  _____|$$$\    $$$ |\_$$  _|$$ |  $$ |$$$\    $$$ |
-$$ |  $$ |$$ |  $$ |$$ |      $$$$\  $$$$ |  $$ |  $$ |  $$ |$$$$\  $$$$ |
-$$$$$$$  |$$$$$$$  |$$$$$\    $$\$$\$$ $$ |  $$ |  $$ |  $$ |$$\$$\$$ $$ |
-$$  ____/ $$  __$$< $$  __|   $$ \$$$  $$ |  $$ |  $$ |  $$ |$$ \$$$  $$ |
-$$ |      $$ |  $$ |$$ |      $$ |\$  /$$ |  $$ |  $$ |  $$ |$$ |\$  /$$ |
-$$ |      $$ |  $$ |$$$$$$$$\ $$ | \_/ $$ |$$$$$$\ \$$$$$$  |$$ | \_/ $$ |
-\__|      \__|  \__|\________|\__|     \__|\______| \______/ \__|     \__|
-                                                                          
+
+                                            /$$\                         
+                                            \__|                        
+$$$$$$\   $$$$$$\   $$$$$$\  $$$$$$\$$$$\  $$\ $$\   $$\ $$$$$$\$$$$\  
+$$  __$$\ $$  __$$\ $$  __$$\ $$  _$$  _$$\ $$ |$$ |  $$ |$$  _$$  _$$\ 
+$$ /  $$ |$$ |  \__|$$$$$$$$ |$$ / $$ / $$ |$$ |$$ |  $$ |$$ / $$ / $$ |
+$$ |  $$ |$$ |      $$   ____|$$ | $$ | $$ |$$ |$$ |  $$ |$$ | $$ | $$ |
+$$$$$$$  |$$ |      \$$$$$$$\ $$ | $$ | $$ |$$ |\$$$$$$  |$$ | $$ | $$ |
+$$  ____/ \__|       \_______|\__| \__| \__|\__| \______/ \__| \__| \__|
+$$ |                                                                    
+$$ |                                                                    
+\__|                                                                    
+                       */
 
 /* PREMIUM */
 .premium-container {
@@ -597,15 +635,31 @@ $$ |      $$ |  $$ |$$$$$$$$\ $$ | \_/ $$ |$$$$$$\ \$$$$$$  |$$ | \_/ $$ |
   margin : auto;
   display: flex;
   flex-direction: column;
-}
-.purchase-choice{
+  padding-top: 80px;
 }
 
-.premium-choice-btn{
+.premium-container h1 {
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px rgb(99, 10, 80), 0 0 20px rgb(99, 10, 80),
+    0 0 40px rgb(99, 10, 80), 0 0 80px rgba(250, 0, 196, 0.469),
+    0 0 90px rgba(250, 0, 196, 0.469), 0 0 100px rgba(250, 0, 196, 0.469),
+    0 0 150px rgba(250, 0, 196, 0.469);
 }
+
+.card-3d-wrap ul li {
+  list-style:inside;
+}
+
+.purchase-choice h2{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* .premium-choice-btn{
+} */
 
 .pay-abo{
-background-color: #04ca04;
+background-color: #04ca7e;
 }
 
 .pay-abo {
@@ -613,6 +667,16 @@ background-color: #04ca04;
   padding: 8px;
   border: none;
   color: black;
-  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+
 }
+
+.pay-abo:hover{
+  background-color: #380b37;
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+
 /* PAYMENT */
