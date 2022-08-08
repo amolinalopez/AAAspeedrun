@@ -1,138 +1,109 @@
-{{!-- font awesome : ne marche qu'avec la version 5.15.4 pas au dessus --}}
+{{! font awesome : ne marche qu'avec la version 5.15.4 pas au dessus }}
 
+<!-- MAIN -->
+<div class="logIn">
+  <div class="auth-container">
+    <!-- switch button -->
+    <h2><span>Log In</span>|<span>Sign Up</span></h2>
+    <input class="checkbox" type="checkbox" id="switch" name="switch" />
+    <label for="switch"></label>
 
-{{!--                   $$\                       $$\ $$\                                                                 
-                        \__|                      $$ |\__|                                                                
-$$$$$$\$$$$\   $$$$$$\  $$\ $$$$$$$\         $$$$$$$ |$$\ $$\    $$\                                                      
-$$  _$$  _$$\  \____$$\ $$ |$$  __$$\       $$  __$$ |$$ |\$$\  $$  |                                                     
-$$ / $$ / $$ | $$$$$$$ |$$ |$$ |  $$ |      $$ /  $$ |$$ | \$$\$$  /                                                      
-$$ | $$ | $$ |$$  __$$ |$$ |$$ |  $$ |      $$ |  $$ |$$ |  \$$$  /                                                       
-$$ | $$ | $$ |\$$$$$$$ |$$ |$$ |  $$ |      \$$$$$$$ |$$ |   \$  /                                                        
-\__| \__| \__| \_______|\__|\__|  \__|       \_______|\__|    \_/                                                         
-                                                                                                                          
-                                                                                                                          
-                                                                                                                          
-                                                                                                                          
-                                                                                                                          
-                                                                                                                          
-                                                                                                                          
-                                                                                                                          
-                                                                                                                          
-                                                                                                                          
-                        $$\   $$\               $$\             $$\                   $$\     $$\                         
-                        \__|  $$ |              $$ |            $$ |                  $$ |    $$ |                        
- $$$$$$$\ $$\  $$\  $$\ $$\ $$$$$$\    $$$$$$$\ $$$$$$$\        $$$$$$$\  $$\   $$\ $$$$$$\ $$$$$$\    $$$$$$\  $$$$$$$\  
-$$  _____|$$ | $$ | $$ |$$ |\_$$  _|  $$  _____|$$  __$$\       $$  __$$\ $$ |  $$ |\_$$  _|\_$$  _|  $$  __$$\ $$  __$$\ 
-\$$$$$$\  $$ | $$ | $$ |$$ |  $$ |    $$ /      $$ |  $$ |      $$ |  $$ |$$ |  $$ |  $$ |    $$ |    $$ /  $$ |$$ |  $$ |
- \____$$\ $$ | $$ | $$ |$$ |  $$ |$$\ $$ |      $$ |  $$ |      $$ |  $$ |$$ |  $$ |  $$ |$$\ $$ |$$\ $$ |  $$ |$$ |  $$ |
-$$$$$$$  |\$$$$$\$$$$  |$$ |  \$$$$  |\$$$$$$$\ $$ |  $$ |      $$$$$$$  |\$$$$$$  |  \$$$$  |\$$$$  |\$$$$$$  |$$ |  $$ |
-\_______/  \_____\____/ \__|   \____/  \_______|\__|  \__|      \_______/  \______/    \____/  \____/  \______/ \__|  \__|
-                                                                                                                          
-                                                                                                                          
-                                                                                                                          
-                                                                                                                          
-                                                                                                                          
-                                                                                                                          
-                                                                                                                         
-                                                                                                                          
-                                                                                                                          
-                                                                                                                          
-                                                                                                                          
-                                   $$\                                                                                    
-                                   $$ |                                                                                   
- $$$$$$$\ $$$$$$\   $$$$$$\   $$$$$$$ |                                                                                   
-$$  _____|\____$$\ $$  __$$\ $$  __$$ |                                                                                   
-$$ /      $$$$$$$ |$$ |  \__|$$ /  $$ |                                                                                   
-$$ |     $$  __$$ |$$ |      $$ |  $$ |                                                                                   
-\$$$$$$$\\$$$$$$$ |$$ |      \$$$$$$$ |                                                                                   
- \_______|\_______|\__|       \_______|                                                                                   
-                                                                                                                          
-                                                                                                                          
-                                                                                                                          
-                                                                                                                          
-                                                                                                                          
-                                                                                                                          
-                                                                                                                          
-                                                                                                                          
-                                                                                                                          
-                                                                                                                          
- $$$$$$\                                $$\               $$\                           $$\                               
-$$  __$$\                               $$ |              $$ |                          \__|                              
-$$ /  \__|$$$$$$\   $$$$$$\  $$$$$$$\ $$$$$$\   $$\       $$ | $$$$$$\   $$$$$$\        $$\ $$$$$$$\                      
-$$$$\    $$  __$$\ $$  __$$\ $$  __$$\\_$$  _|  \__|      $$ |$$  __$$\ $$  __$$\       $$ |$$  __$$\                     
-$$  _|   $$ |  \__|$$ /  $$ |$$ |  $$ | $$ |              $$ |$$ /  $$ |$$ /  $$ |      $$ |$$ |  $$ |                    
-$$ |     $$ |      $$ |  $$ |$$ |  $$ | $$ |$$\ $$\       $$ |$$ |  $$ |$$ |  $$ |      $$ |$$ |  $$ |                    
-$$ |     $$ |      \$$$$$$  |$$ |  $$ | \$$$$  |\__|      $$ |\$$$$$$  |\$$$$$$$ |      $$ |$$ |  $$ |                    
-\__|     \__|       \______/ \__|  \__|  \____/           \__| \______/  \____$$ |      \__|\__|  \__|                    
-                                                                        $$\   $$ |                                        
-                                                                        \$$$$$$  |                                        
-                                                                         \______/                                         
-                                                                                                                          
-                                                                                                                          
-                                                                                                                          
-                                                                                                                          
-                                                                                                                          
-                                                                                                                          
-                                                                                                                          
-                                                                                                                                                                                                           
-                                                                                                                          
-$$\                           $$\                           $$\                                                           
-$$ |                          $$ |                          \__|                                                          
-$$$$$$$\   $$$$$$\   $$$$$$$\ $$ |  $$\ $$\        $$$$$$$\ $$\  $$$$$$\  $$$$$$$\        $$\   $$\  $$$$$$\              
-$$  __$$\  \____$$\ $$  _____|$$ | $$  |\__|      $$  _____|$$ |$$  __$$\ $$  __$$\       $$ |  $$ |$$  __$$\             
-$$ |  $$ | $$$$$$$ |$$ /      $$$$$$  /           \$$$$$$\  $$ |$$ /  $$ |$$ |  $$ |      $$ |  $$ |$$ /  $$ |            
-$$ |  $$ |$$  __$$ |$$ |      $$  _$$$  $$\        \____$$\ $$ |$$ |  $$ |$$ |  $$ |      $$ |  $$ |$$ |  $$ |            
-$$$$$$$  |\$$$$$$$ |\$$$$$$$\ $$ | \$$\ \__|      $$$$$$$  |$$ |\$$$$$$$ |$$ |  $$ |      \$$$$$$  |$$$$$$$  |            
-\_______/  \_______| \_______|\__|  \__|          \_______/ \__| \____$$ |\__|  \__|       \______/ $$  ____/             
-                                                                $$\   $$ |                          $$ |                  
-                                                                \$$$$$$  |                          $$ |                  
-                                                                 \______/                           \__|                   --}}
+    <!-- 3d card -->
+    <div class="card-3d-wrap">
+      <div class="card-3d-wrapper">
 
+        <!-- LOG IN  -->
+        <div class="card-front">
+          <div class="center-wrap">
+            <h3>Welcome back!</h3>
+            <div class="btn googleAuth-btn">
+              <a href="#notArouteYET"><img
+                  src="https://d3ptyyxy2at9ui.cloudfront.net/google-32ae27.svg"
+                />Log in with Google</a>
+            </div>
 
+            <div class="ligneGoogle">
+              <div>or</div>
+            </div>
 
+            <form method="POST" action="/login">
+              <label>E-mail <i class="fas fa-at"> </i></label>
+              <input
+                type="string"
+                name="email"
+                placeholder="Your email adress"
+              />
 
+              <label>Password</label>
+              <input
+                type="password"
+                name="password"
+                placeholder="Your password"
+              />
+              <a class="pwd-reset-link" href="#notArouteYET">Oops, I forgot my
+                password 😅</a>
 
+              <button class="btn auth-btn" type="submit">Log in</button>
 
+            </form>
+          </div>
+        </div>
 
+        <!-- SIGN UP -->
+        <div class="card-signUp">
+          <div class="center-wrap">
+            <div class="btn googleAuth-btn">
+              <a href="#notArouteYET"><img
+                  src="https://d3ptyyxy2at9ui.cloudfront.net/google-32ae27.svg"
+                />Sign up with Google</a>
+            </div>
 
-<p>SIGN UP</p>
-<form action="/signup" method="POST">
-<label>
-    username<input type="string" name="username" placeholder="your username" >
-</label> 
-<label>
-    <i class="fas fa-at"></i>
-    email<input type="email" name="email" placeholder="your e-mail" >
-</label>
-<label>
-    password<input type="password" name="password" placeholder="your password">
-</label>
-{{!-- <label>
-    confirm password <input type="password" name="confirmPassword">
-</label> --}}
-<i class="fas fa-eye"></i>
-<i class="fas fa-eye-slash"></i>
-<button type="submit">Sign up</button>
-</form>
+            <div class="ligneGoogle">
+              <div>or</div>
+            </div>
 
-<br>
+            <form method="POST" action="/signup">
+              <label>Username</label>
+              <input
+                type="string"
+                name="Username"
+                placeholder="Your username"
+              />
 
-<p>LOG IN</p>
-<form action="/login" method="POST">
-<label>
-    username <input type="string" name="username" placeholder="your username" >
-</label>
-<i class="fas fa-at"></i>
-<label>
-    email<input type="email" name="email" placeholder="your e-mail">    
+              <label>E-mail <i class="fas fa-at"> </i></label>
+              <input type="email" name="email" placeholder="Your e-mail" />
 
-</label>
-<label>
-    password<input type="password" name="password" placeholder="your password">
-</label>
-<button type="submit">Log in</button>
-</form>
+              
+              <label>Password</label>
+              
+              <input
+                type="password"
+                name="password"
+                placeholder="Your password"
+                id="typedPwd"
+              />              
+              <button id="show-pwd-btn" type="button" onclick="MyPwdShow()"; >Show <i id="eyeToggle" class="fas fa-eye"></i>
+              </button>
+              
 
-{{#if errorMessage}}
-<p>{{errorMessage}}</p>
-{{/if}}
+              <label>Confirm password</label>
+              <input
+                type="password"
+                name="confirmPassword"
+                placeholder="Confirm password"
+              />
+
+              <button class="btn auth-btn" type="submit">Sign up</button>
+
+              {{#if errorMessage}}
+                <p>{{errorMessage}}</p>
+              {{/if}}
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
