@@ -20,12 +20,12 @@ body {
   font-size: 18px;
   font-family: var(--main-font);
   color: var(--white);
-<<<<<<< HEAD
-  background-color: #322c32;
+
+  /* background-color: #322c32; */
   /* background-color: var(--background-dark);; */
-=======
+
   background-color: var(--background-dark);
->>>>>>> 415525fdfb1912c5bdca17a7f26c792661d20f9d
+
 }
 
 /* 
@@ -873,9 +873,6 @@ $$$$$$$$\\$$$$$$  |\$$$$$$$ |$$$$$$\ $$ |  $$ |      \$$$$$$  |$$ |\$$$$$$$ |$$ 
   text-decoration: none;
 }
 
-/* button > h4{
-  margin: 0;
-} */
 
  #show-pwd-btn {
   font-size: 17px;
