@@ -4,10 +4,10 @@ const Runs=require('../models/Run.model.js')
 
 /* GET home page */
 router.get("/", (req, res, next) => {
-  console.log("runs",Runs)
   Runs.find().sort({date:-1}).limit(20)
-  // .populate("category")
-  // .populate("category.gameID")
+   .populate("categoryID")
+   .populate("gameID")
+   .populate("userID")
   .then(allRunsFromDB=>{
     console.log("allRunsFromDB:",allRunsFromDB)
     res.render("homepage",{runs:allRunsFromDB})

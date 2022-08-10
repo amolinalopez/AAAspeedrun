@@ -23,7 +23,7 @@ body {
   font-size: 18px;
   font-family: "Chakra Petch", sans-serif;
   color: var(--white);
-  background-image: linear-gradient(var(--background-dark), #322c32);
+  background-color: #322c32;
   /* background-color: var(--background-dark);; */
 }
 

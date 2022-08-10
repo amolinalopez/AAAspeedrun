@@ -7,7 +7,8 @@ title:String,
 year:Number,
 platforms:Array,
 cover:Object,
-categories:Array,
+categoriesID:Array,
+categories_id:Array,
 
   }, { timestamps: true, });
 
