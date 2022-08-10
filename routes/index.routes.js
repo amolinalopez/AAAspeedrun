@@ -5,11 +5,10 @@ const Runs=require('../models/Run.model.js')
 /* GET home page */
 router.get("/", (req, res, next) => {
   Runs.find().sort({date:-1}).limit(20)
-   .populate("categoryID")
-   .populate("gameID")
-   .populate("userID")
+  // .populate("category")
+  // .populate("category.gameID")
   .then(allRunsFromDB=>{
-    console.log("allRunsFromDB:",allRunsFromDB)
+   // console.log("allRunsFromDB:",allRunsFromDB)
     res.render("homepage",{runs:allRunsFromDB})
   })
     .catch(err => {
@@ -29,10 +28,6 @@ router.get("/error", (req, res, next) => {
   res.render("error");
 })
 
-/* GET contact page */
-router.get("/contact", (req, res, next) => {
-  res.render("contact");
-})
 
 /* GET login page */
 const bcryptjs = require('bcryptjs');
@@ -46,20 +41,23 @@ router.get("/login", (req, res, next) => {
 })
 
 router.post("/signup", (req, res, next) => {
-  console.log('the form data:', req.body.email)
+  console.log('the form data:', req.body.username)
   const { username, email, password, confirmPassword } = req.body
   const hashedPassword = bcryptjs.hashSync(password, salt)
   console.log('Hashed Password=', hashedPassword)
   if (password != confirmPassword){
     res.render('login',{errorMessage:'Password and confirmation must match, please try again.'});
+    console.log("wrong confirmation")
     return
   }
   if (!username || !email || !password || !confirmPassword) {
     res.render('login', { errorMessage: 'All fields are mandatory. Please provide your username, email, password and password confirmation' });
+    console.log("a field is empty")
     return;
   }
   if (!regex.test(password)) {
     res.render('login', { errorMessage: 'Password needs to have at least 6 chars and must contain at least one number, one lowercase and one uppercase letter.' });
+    console.log("wrong format")
     return;
   }
   User.create({
