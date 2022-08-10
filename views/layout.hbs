@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <script src="https://kit.fontawesome.com/451a44f98e.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/451a44f98e.js"
+      crossorigin="anonymous"
+    ></script>
 
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <link rel="icon" type="image/png" href="images/logoSymbol.svg" />
@@ -22,7 +25,7 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap"
       rel="stylesheet"
     />
-    
+
     <title>AAA Games</title>
 
   </head>
@@ -44,11 +47,13 @@
                 width="100px"
               />
             </a>
-            <a href="games">GAMES</a>
-            <a href="login">LOGIN SIGN UP</a>
-            {{!-- <a href="#">SEARCH 🔍</a> --}}
-            <a href="premium">PREMIUM</a>
-            <a href="about">ABOUT</a>
+            <a href="game/list">GAMES</a>
+            <a href="/login">LOGIN</a>
+            <a href="/signup">SIGN UP</a>
+
+            {{! <a href="#">SEARCH 🔍</a> }}
+            <a href="/premium">PREMIUM</a>
+            <a href="/about">ABOUT</a>
           </div>
         </div>
       </div>
@@ -58,7 +63,7 @@
         <a href="/">
           <img src="/images/logoBam.svg" alt="logo" width="180px" />
         </a>
-        <a href="/games">Games</a>
+        <a href="/game/list">Games</a>
         <a href="/premium">
           <img src="/images/medal.svg" alt="premium Subscribe" width="40px" />
         </a>
@@ -68,9 +73,12 @@
         </div>
         <a href="/about">About</a>
         <button>
-          <a href="login">Log In | Sign Up </a>
+          <a href="/login">Log In</a>
         </button>
+        <button>
+          <a href="/signup">Sign Up</a>
 
+        </button>
       </div>
 
     </div>
