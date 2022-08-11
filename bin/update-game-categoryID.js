@@ -40,6 +40,7 @@ async function main() {
     // pour chaque run, aller chercher le Category.id correspondant au Run.category
     let count = 0
     for (let game of games) {
+        console.log("game:",game)
         console.log('game.category_id=', game.categories_id)
         const _id = await mapGameCategory(game.categories_id).catch((err) => {     
             console.log("err=", err)

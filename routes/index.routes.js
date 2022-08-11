@@ -5,10 +5,10 @@ const Runs=require('../models/Run.model.js')
 /* GET home page */
 router.get("/", (req, res, next) => {
   Runs.find().sort({date:-1}).limit(20)
-  // .populate("category")
-  // .populate("category.gameID")
+  .populate("categoryID")
+  .populate("gameID")
   .then(allRunsFromDB=>{
-   // console.log("allRunsFromDB:",allRunsFromDB)
+    console.log("allRunsFromDB:",allRunsFromDB)
     res.render("homepage",{runs:allRunsFromDB})
   })
     .catch(err => {
@@ -46,6 +46,7 @@ router.post("/signup", (req, res, next) => {
   const hashedPassword = bcryptjs.hashSync(password, salt)
   console.log('Hashed Password=', hashedPassword)
   if (password != confirmPassword){
+
     res.render('login',{errorMessage:'Password and confirmation must match, please try again.'});
     console.log("wrong confirmation")
     return
