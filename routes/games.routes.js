@@ -5,7 +5,7 @@ const speedrun = new SpeedrunClient()
 
 const router = require("express").Router();
 
-router.get("/", (req, res, next) => {
+router.get("/list", (req, res, next) => {
   res.render('games')
   });
 
