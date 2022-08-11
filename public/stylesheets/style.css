@@ -575,9 +575,14 @@ $$ |
     0 0 150px rgba(250, 0, 196, 0.469);
 }
 
+/*.card-3d-wrap ul li {
+=======
 .card-3d-wrap ul li {
+>>>>>>> 0e52d6b7290ad1ff41fb3ba3b921b5b2f6703fc5
   list-style: inside;
-}
+  color: white;
+  list-style-type: none;
+}*/
 
 .purchase-choice h2 {
   padding-top: 10px;
@@ -909,4 +914,8 @@ $$$$$$$$\\$$$$$$  |\$$$$$$$ |$$$$$$\ $$ |  $$ |      \$$$$$$  |$$ |\$$$$$$$ |$$ 
   text-shadow: 0 1px 0 var(--white);
   top: -10px;
   left: 40%;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 0e52d6b7290ad1ff41fb3ba3b921b5b2f6703fc5
