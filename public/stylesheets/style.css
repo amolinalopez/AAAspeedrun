@@ -394,15 +394,13 @@ footer {
 .premium-choice-btn{
 }
 
-.pay-abo{
-background-color: #04ca04;
-}
-
 .pay-abo {
+  background-color: #04ca04;
   border-radius: 5px;
   padding: 8px;
   border: none;
   color: black;
   text-decoration: none;
 }
+
 /* PAYMENT */
