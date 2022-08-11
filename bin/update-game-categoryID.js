@@ -24,7 +24,7 @@ async function main() {
             console.log("cat=", cat)
             if (cat === null) {
                 
-                cat={}
+                //cat={}
                 throw new Error('ECAT_MISMATCHING')
             }
             
@@ -44,8 +44,8 @@ async function main() {
         console.log('game.category_id=', game.categories_id)
         const _id = await mapGameCategory(game.categories_id).catch((err) => {     
             console.log("err=", err)
-            // if (err.message === 'ECAT_MISMATCHING') 
-            if (cat === {}) 
+            if (err.message === 'ECAT_MISMATCHING') 
+            //if (cat === {}) 
             {
                 console.log('remove this one')
                 count += 1
