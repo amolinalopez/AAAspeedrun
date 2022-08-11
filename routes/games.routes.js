@@ -8,7 +8,7 @@ const router = require("express").Router();
 
 router.get("/list", (req, res, next) => {
   Game.find()
-  .populate(categories)
+  // .populate(categories)
   res.render('games')
   });
 
