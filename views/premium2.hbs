@@ -1,0 +1,86 @@
+<!-- MAIN -->
+<div class="logIn">
+  <div class="auth-container">
+    <!-- switch button -->
+    <h2><span>ABO</span>|<span>BUCK</span></h2>
+    <input class="checkbox" type="checkbox" id="switch" name="switch" />
+    <label for="switch"></label>
+
+    <!-- 3d card -->
+    <div class="card-3d-wrap">
+      <div class="card-3d-wrapper">
+
+        <!-- RECURRING/ABONNEMENT -->
+        <div class="card-front-abo">
+          <div class="center-wrap-abo">
+            <h3>BECOME AN AAA PREMIUM</h3>
+  <ul>
+    <li>AD-FREE</li>
+    <li>ADD-GAME</li>
+    <li>PREMIUM BADGE</li>
+    <li>SUPPORT AAA</li>
+    <li>10 AAA BUCK</li>
+    <button class="abo-btn"> Pay 3,99€ now </button>
+  </ul>
+  <img class="paymentMethode" src="https://res.cloudinary.com/du5v6izdd/image/upload/v1660231366/AAA%20speedrun%20/payment-type_nrni9k.png"/>
+        </div>
+        
+
+        <!-- AAA-BUCK PURCHASE CARD -->
+        <div class="card-signUp">
+          <div class="center-wrap">
+            <div class="btn googleAuth-btn">
+              <a href="#notArouteYET"><img
+                  src="https://d3ptyyxy2at9ui.cloudfront.net/google-32ae27.svg"
+                />Sign up with Google</a>
+            </div>
+
+            <div class="ligneGoogle">
+              <div>or</div>
+            </div>
+
+            <form method="POST" action="/signup">
+              <label>Username</label>
+              <input
+                type="string"
+                name="username"
+                placeholder="Your username"
+              />
+
+              <label>E-mail <i class="fas fa-at"> </i></label>
+              <input type="email" name="email" placeholder="Your e-mail" />
+
+              
+              <label>Password</label>
+              
+              <input
+                type="password"
+                name="password"
+                placeholder="Your password"
+                id="typedPwd"
+              />              
+              <button id="show-pwd-btn" type="button" onclick="MyPwdShow()"; >Show <i id="eyeToggle" class="fas fa-eye"></i>
+              </button>
+              
+
+              <label>Confirm password</label>
+              <input
+                type="password"
+                name="confirmPassword"
+                placeholder="Confirm password"
+              />
+
+              <button class="btn auth-btn" type="submit">Sign up</button>
+
+              {{#if errorMessage}}
+                <p>{{errorMessage}}</p>
+              {{/if}}
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
