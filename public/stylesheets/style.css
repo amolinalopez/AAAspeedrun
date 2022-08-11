@@ -575,11 +575,12 @@ $$ |
     0 0 150px rgba(250, 0, 196, 0.469);
 }
 
-<<<<<<< HEAD
-=======
-.card-3d-wrap ul li {
+
+/*.card-3d-wrap ul li {
   list-style: inside;
-}
+  color: white;
+  list-style-type: none;
+}*/
 
 .purchase-choice h2 {
   padding-top: 10px;
@@ -593,7 +594,6 @@ $$ |
   background-color: #04ca7e;
 }
 
->>>>>>> f407f5fa71efbb01e7a28f5992a6939467b2022d
 .pay-abo {
   background-color: #04ca04;
   border-radius: 5px;
@@ -877,9 +877,7 @@ $$$$$$$$\\$$$$$$  |\$$$$$$$ |$$$$$$\ $$ |  $$ |      \$$$$$$  |$$ |\$$$$$$$ |$$ 
   text-decoration: none;
 }
 
-<<<<<<< HEAD
 /* PAYMENT */
-=======
 
  #show-pwd-btn {
   font-size: 17px;
@@ -915,4 +913,3 @@ $$$$$$$$\\$$$$$$  |\$$$$$$$ |$$$$$$\ $$ |  $$ |      \$$$$$$  |$$ |\$$$$$$$ |$$ 
   top: -10px;
   left: 40%;
 }
->>>>>>> f407f5fa71efbb01e7a28f5992a6939467b2022d
