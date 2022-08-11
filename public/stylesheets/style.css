@@ -288,7 +288,7 @@ input::placeholder {
 
 .card__arc path {
   fill: var(--card-surface-color);
-  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+  /* d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z"); */
 }
 
 .card:hover .card__header {
@@ -575,8 +575,6 @@ $$ |
     0 0 150px rgba(250, 0, 196, 0.469);
 }
 
-<<<<<<< HEAD
-=======
 .card-3d-wrap ul li {
   list-style: inside;
 }
@@ -593,7 +591,6 @@ $$ |
   background-color: #04ca7e;
 }
 
->>>>>>> f407f5fa71efbb01e7a28f5992a6939467b2022d
 .pay-abo {
   background-color: #04ca04;
   border-radius: 5px;
@@ -877,9 +874,7 @@ $$$$$$$$\\$$$$$$  |\$$$$$$$ |$$$$$$\ $$ |  $$ |      \$$$$$$  |$$ |\$$$$$$$ |$$ 
   text-decoration: none;
 }
 
-<<<<<<< HEAD
 /* PAYMENT */
-=======
 
  #show-pwd-btn {
   font-size: 17px;
@@ -915,4 +910,3 @@ $$$$$$$$\\$$$$$$  |\$$$$$$$ |$$$$$$\ $$ |  $$ |      \$$$$$$  |$$ |\$$$$$$$ |$$ 
   top: -10px;
   left: 40%;
 }
->>>>>>> f407f5fa71efbb01e7a28f5992a6939467b2022d
