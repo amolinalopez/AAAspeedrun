@@ -18,14 +18,14 @@
 
 
 <!--TEST ALAN -->
-<div> 
+{{!-- <div> 
   {{#each runs}}
   cover:{{gameID.cover}}<img src={{gameID.cover}}>
   username:{{userID}}
   time:{{time_seconds}}
   category:{{categoryID.name}}
   {{/each }}
-</div>
+</div> --}}
 <!--TEST ALAN -->
 
 
@@ -34,10 +34,11 @@
     Latest Runs
   </h1>
   <ul class="cards">
-    <li>
+      {{#each runs}}
+      <li>
       <a href="" class="card">
         <img
-          src="http://res.cloudinary.com/dsbxyd6o2/image/upload/v1659370122/Stray-game_lmlvqd.jpg"
+          src="{{gameID.cover}}"
           class="card__image"
           alt=""
         />
@@ -51,8 +52,7 @@
               alt=""
             />
             <div class="card__header-text">
-              <h3 class="card__userName">Adri Molina Lopez</h3>
-              <span class="card__status">1 hour ago</span>
+              <h3 class="card__userName">{{userID}}</h3>
             </div>
           </div>
           <p class="card__description">YAY adipisicing elit. Asperiores,
@@ -60,240 +60,7 @@
         </div>
       </a>
     </li>
-    <li>
-      <a href="" class="card">
-        <img
-          src="https://i.pinimg.com/564x/66/e8/c7/66e8c77d1cb2c1f77f80a7836385ea07.jpg"
-          class="card__image"
-          alt=""
-        />
-        <div class="card__overlay">
-          <div class="card__header">
-            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path
-              ></path></svg>
-            <img
-              class="card__avatar"
-              src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png"
-              alt=""
-            />
-            <div class="card__header-text">
-              <h3 class="card__userName">Alan ROGER</h3>
-              <span class="card__status">3 hours ago</span>
-            </div>
-          </div>
-          <p class="card__description">Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Asperiores, blanditiis?</p>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="" class="card">
-        <img
-          src="https://commondatastorage.googleapis.com/images.pricecharting.com/82534b3527d878518b17e3c43f67bea0cbb039cfe11f947700af55bdbda3ae79/240.jpg"
-          class="card__image"
-          alt=""
-        />
-        <div class="card__overlay">
-          <div class="card__header">
-            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path
-              ></path></svg>
-            <img
-              class="card__avatar"
-              src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png"
-              alt=""
-            />
-            <div class="card__header-text">
-              <h3 class="card__userName">Alexandre</h3>
-              <span class="card__status">3 hours ago</span>
-            </div>
-          </div>
-          <p class="card__description">Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Asperiores, blanditiis?</p>
-        </div>
-      </a>
-    </li><li>
-      <a href="" class="card">
-        <img
-          src="http://res.cloudinary.com/dsbxyd6o2/image/upload/v1659370122/Stray-game_lmlvqd.jpg"
-          class="card__image"
-          alt=""
-        />
-        <div class="card__overlay">
-          <div class="card__header">
-            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path
-              ></path></svg>
-            <img
-              class="card__avatar"
-              src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png"
-              alt=""
-            />
-            <div class="card__header-text">
-              <h3 class="card__userName">Adri Molina Lopez</h3>
-              <span class="card__status">1 hour ago</span>
-            </div>
-          </div>
-          <p class="card__description">YAY adipisicing elit. Asperiores,
-            blanditiis?</p>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="" class="card">
-        <img
-          src="https://commondatastorage.googleapis.com/images.pricecharting.com/82534b3527d878518b17e3c43f67bea0cbb039cfe11f947700af55bdbda3ae79/240.jpg"
-          class="card__image"
-          alt=""
-        />
-        <div class="card__overlay">
-          <div class="card__header">
-            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path
-              ></path></svg>
-            <img
-              class="card__avatar"
-              src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png"
-              alt=""
-            />
-            <div class="card__header-text">
-              <h3 class="card__userName">Alan ROGER</h3>
-              <span class="card__status">3 hours ago</span>
-            </div>
-          </div>
-          <p class="card__description">Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Asperiores, blanditiis?</p>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="" class="card">
-        <img
-          src="https://commondatastorage.googleapis.com/images.pricecharting.com/82534b3527d878518b17e3c43f67bea0cbb039cfe11f947700af55bdbda3ae79/240.jpg"
-          class="card__image"
-          alt=""
-        />
-        <div class="card__overlay">
-          <div class="card__header">
-            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path
-              ></path></svg>
-            <img
-              class="card__avatar"
-              src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png"
-              alt=""
-            />
-            <div class="card__header-text">
-              <h3 class="card__userName">Alexandre LESCAT</h3>
-              <span class="card__status">3 hours ago</span>
-            </div>
-          </div>
-          <p class="card__description">Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Asperiores, blanditiis?</p>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="" class="card">
-        <img
-          src="http://res.cloudinary.com/dsbxyd6o2/image/upload/v1659370122/Stray-game_lmlvqd.jpg"
-          class="card__image"
-          alt=""
-        />
-        <div class="card__overlay">
-          <div class="card__header">
-            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path
-              ></path></svg>
-            <img
-              class="card__avatar"
-              src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png"
-              alt=""
-            />
-            <div class="card__header-text">
-              <h3 class="card__userName">Adri Molina Lopez</h3>
-              <span class="card__status">1 hour ago</span>
-            </div>
-          </div>
-          <p class="card__description">YAY adipisicing elit. Asperiores,
-            blanditiis?</p>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="" class="card">
-        <img
-          src="https://commondatastorage.googleapis.com/images.pricecharting.com/82534b3527d878518b17e3c43f67bea0cbb039cfe11f947700af55bdbda3ae79/240.jpg"
-          class="card__image"
-          alt=""
-        />
-        <div class="card__overlay">
-          <div class="card__header">
-            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path
-              ></path></svg>
-            <img
-              class="card__avatar"
-              src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png"
-              alt=""
-            />
-            <div class="card__header-text">
-              <h3 class="card__userName">Alan ROGER</h3>
-              <span class="card__status">3 hours ago</span>
-            </div>
-          </div>
-          <p class="card__description">Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Asperiores, blanditiis?</p>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="" class="card">
-        <img
-          src="https://commondatastorage.googleapis.com/images.pricecharting.com/82534b3527d878518b17e3c43f67bea0cbb039cfe11f947700af55bdbda3ae79/240.jpg"
-          class="card__image"
-          alt=""
-        />
-        <div class="card__overlay">
-          <div class="card__header">
-            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path
-              ></path></svg>
-            <img
-              class="card__avatar"
-              src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png"
-              alt=""
-            />
-            <div class="card__header-text">
-              <h3 class="card__userName">Alexandre</h3>
-              <span class="card__status">3 hours ago</span>
-            </div>
-          </div>
-          <p class="card__description">Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Asperiores, blanditiis?</p>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="" class="card">
-        <img
-          src="http://res.cloudinary.com/dsbxyd6o2/image/upload/v1659370122/Stray-game_lmlvqd.jpg"
-          class="card__image"
-          alt=""
-        />
-        <div class="card__overlay">
-          <div class="card__header">
-            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path
-              ></path></svg>
-            <img
-              class="card__avatar"
-              src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png"
-              alt=""
-            />
-            <div class="card__header-text">
-              <h3 class="card__userName">Adri Molina Lopez</h3>
-              <span class="card__status">1 hour ago</span>
-            </div>
-          </div>
-          <p class="card__description">YAY adipisicing elit. Asperiores,
-            blanditiis?</p>
-        </div>
-      </a>
-    </li>
-
+     {{/each }}
   </ul>
 
 </div>

@@ -288,7 +288,7 @@ input::placeholder {
 
 .card__arc path {
   fill: var(--card-surface-color);
-  /* d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z"); */
+  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
 }
 
 .card:hover .card__header {
@@ -688,6 +688,10 @@ $$ |
 }
 
 /*.card-3d-wrap ul li {
+<<<<<<< HEAD
+=======
+.card-3d-wrap ul li {
+>>>>>>> 65d33d415300153d491f7a6a944087a2edddfa0a
   list-style: inside;
   color: white;
   list-style-type: none;
@@ -1015,3 +1019,7 @@ $$$$$$$$\\$$$$$$  |\$$$$$$$ |$$$$$$\ $$ |  $$ |      \$$$$$$  |$$ |\$$$$$$$ |$$ 
   top: -10px;
   left: 40%;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 65d33d415300153d491f7a6a944087a2edddfa0a
