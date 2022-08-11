@@ -46,7 +46,7 @@ router.post("/signup", (req, res, next) => {
   const hashedPassword = bcryptjs.hashSync(password, salt)
   console.log('Hashed Password=', hashedPassword)
   if (password != confirmPassword){
-    res.render('login',{errorMessage:'Password and confirmation must match, please try again.'});
+    res.render('signup',{errorMessage:'Password and confirmation must match, please try again.'});
     console.log("wrong confirmation")
     return
   }
