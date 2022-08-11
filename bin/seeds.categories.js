@@ -6,7 +6,6 @@ const categories = categoriesData.filter((el) => el).map((el) => {
   return {
       id:el.id,
       name:el.name,
-      gameID:el.gameID
   }
 })
 

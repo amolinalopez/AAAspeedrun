@@ -2,9 +2,9 @@ const { Schema, model } = require("mongoose");
 
 const categorySchema = new Schema(
   {
-id:String,
-name:String,
-gameID:String,
+    id: String,
+    name: String,
+
 
   }, { timestamps: true, });
 

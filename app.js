@@ -32,8 +32,8 @@ app.use("/", index);
 const profile = require("./routes/profile.routes");
 app.use("/profile", profile);
 
-const games = require("./routes/games.routes");
-app.use("/games", games);
+const game = require("./routes/games.routes");
+app.use("/game", game);
 
 const payment = require("./routes/payment.routes");
 app.use("/", payment);

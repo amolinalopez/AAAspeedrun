@@ -20,7 +20,6 @@ function fetch() {
             clearInterval(int)
         }
 
-
         const promises = batch(i, json) // 100 permieres promises
 
         Promise.all(promises).then(function () {

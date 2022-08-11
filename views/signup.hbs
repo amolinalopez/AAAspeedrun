@@ -1,0 +1,109 @@
+{{! font awesome : ne marche qu'avec la version 5.15.4 pas au dessus }}
+
+<!-- MAIN -->
+<div class="logIn">
+  <div class="auth-container">
+    <!-- switch button -->
+    <h2><span>Log In</span>|<span>Sign Up</span></h2>
+    <input class="checkbox" type="checkbox" checked="checked" id="switch" name="switch" />
+    <label for="switch"></label>
+
+    <!-- 3d card -->
+    <div class="card-3d-wrap">
+      <div class="card-3d-wrapper">
+
+        <!-- LOG IN  -->
+        <div class="card-front">
+          <div class="center-wrap">
+            <h3>Welcome back!</h3>
+            <div class="btn googleAuth-btn">
+              <a href="#notArouteYET"><img
+                  src="https://d3ptyyxy2at9ui.cloudfront.net/google-32ae27.svg"
+                />Log in with Google</a>
+            </div>
+
+            <div class="ligneGoogle">
+              <div>or</div>
+            </div>
+
+            <form method="POST" action="/login">
+              <label>E-mail <i class="fas fa-at"> </i></label>
+              <input
+                type="string"
+                name="email"
+                placeholder="Your email adress"
+              />
+
+              <label>Password</label>
+              <input
+                type="password"
+                name="password"
+                placeholder="Your password"
+              />
+              <a class="pwd-reset-link" href="#notArouteYET">Oops, I forgot my
+                password 😅</a>
+
+              <button class="btn auth-btn" type="submit">Log in</button>
+
+            </form>
+          </div>
+        </div>
+
+        <!-- SIGN UP -->
+        <div class="card-signUp">
+          <div class="center-wrap">
+            <div class="btn googleAuth-btn">
+              <a href="#notArouteYET"><img
+                  src="https://d3ptyyxy2at9ui.cloudfront.net/google-32ae27.svg"
+                />Sign up with Google</a>
+            </div>
+
+            <div class="ligneGoogle">
+              <div>or</div>
+            </div>
+
+            <form method="POST" action="/signup">
+              <label>Username</label>
+              <input
+                type="string"
+                name="username"
+                placeholder="Your username"
+              />
+
+              <label>E-mail <i class="fas fa-at"> </i></label>
+              <input type="email" name="email" placeholder="Your e-mail" />
+
+              
+              <label>Password</label>
+              
+              <input
+                type="password"
+                name="password"
+                placeholder="Your password"
+                id="typedPwd"
+              />              
+              <button id="show-pwd-btn" type="button" onclick="MyPwdShow()"; >Show <i id="eyeToggle" class="fas fa-eye"></i>
+              </button>
+              
+
+              <label>Confirm password</label>
+              <input
+                type="password"
+                name="confirmPassword"
+                placeholder="Confirm password"
+              />
+
+              <button class="btn auth-btn" type="submit">Sign up</button>
+
+              {{#if errorMessage}}
+                <p>{{errorMessage}}</p>
+              {{/if}}
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
