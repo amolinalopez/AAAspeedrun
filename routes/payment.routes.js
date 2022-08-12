@@ -8,7 +8,7 @@ router.get("/payment", (req, res, next) => {
 });
 
 router.get("/premium", (req, res, next) => {
-  res.render("premium");
+  res.render("premium2");
 });
 
 router.post("/createContext", (req, res, next) => {
