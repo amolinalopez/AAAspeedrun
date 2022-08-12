@@ -1,5 +1,4 @@
 const router = require("express").Router();
-const axios = require("axios")
 const Runs=require('../models/Run.model.js')
 
 /* GET home page */
@@ -41,12 +40,11 @@ router.get("/signup", (req, res, next) => {
 })
 
 router.post("/signup", (req, res, next) => {
-  console.log('the form data:', req.body.username)
   const { username, email, password, confirmPassword } = req.body
   const hashedPassword = bcryptjs.hashSync(password, salt)
   console.log('Hashed Password=', hashedPassword)
   if (password != confirmPassword){
-    res.render('login',{errorMessage:'Password and confirmation must match, please try again.'});
+    res.render('signup',{errorMessage:'Password and confirmation must match, please try again.'});
     console.log("wrong confirmation")
     return
   }
@@ -61,14 +59,14 @@ router.post("/signup", (req, res, next) => {
     return;
   }
   User.create({
-    username, email, passwordHash: hashedPassword
+    username, email, password: hashedPassword
   })
     .then(userFromDB => {
       console.log('New user created:', userFromDB)
       res.render('signup')
     })
     .catch(err => {
-      console.log(err)
+      console.log("err:",err)
       next(err)
     })
 })
@@ -79,7 +77,7 @@ router.get("/login", (req, res, next) => {
 })
 
 router.post("/login", (req, res, next) => {
-  const { username, email, password } = req.body;
+  const { email, password } = req.body;
   console.log('SESSION =====> ', req.session)
   if (email === '' || password === '') {
     res.render('login', {
@@ -92,14 +90,16 @@ router.post("/login", (req, res, next) => {
       if (!user) {
         res.render('login', { errorMessage: 'Email is not registered. Try with other email.' });
         return;
-      } else if (bcryptjs.compareSync(password, user.passwordHash)) {
+      } else if (bcryptjs.compareSync(password, user.password)) {
         req.session.currentUser = user;
         res.redirect('/profile');
       } else {
         res.render('login', { errorMessage: 'Incorrect password.' });
       }
     })
-    .catch(error => next(error));
+    .catch(error => {
+      console.log("err=",err)
+      next(error)});
 });
 
 module.exports = router;

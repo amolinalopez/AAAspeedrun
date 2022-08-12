@@ -1,0 +1,83 @@
+[
+    {
+        "username": "amolina",
+        "email": "amolina@gmail.com",
+        "password": "Amolina123!",
+        "favorites": [],
+        "premium": true,
+        "paymentToken": null,
+        "coins": 55
+    },
+    {
+        "username": "lescata",
+        "email": "lescata@gmail.com",
+        "password": "Lescata123!",
+        "favorites": [],
+        "premium": true,
+        "paymentToken": null,
+        "coins": 69
+    },
+    {
+        "username": "aroger",
+        "email": "aroger@gmail.com",
+        "password": "Aroger123!",
+        "favorites": [],
+        "premium": true,
+        "paymentToken": null,
+        "coins": 42
+    },
+    {
+        "username":"abernier",
+        "email":"abernier@gmail.com",
+        "password":"Abernier123!",
+        "favorites":[],
+        "premium":true,
+        "paymentToken":null,
+        "coins":77
+    },
+    {
+        "username":"benamzz",
+        "email":"benamzz@gmail.com",
+        "password":"Benamzz123!",
+        "favorites":[],
+        "premium":true,
+        "paymentToken":null,
+        "coins":20
+    },
+    {
+        "username":"cecile",
+        "email":"cecile@gmail.com",
+        "password":"Cecile123!",
+        "favorites":[],
+        "premium":true,
+        "paymentToken":null,
+        "coins":18
+    },
+    {
+        "username":"jossuha",
+        "email":"jossuha@gmail.com",
+        "password":"Jossuha123!",
+        "favorites":[],
+        "premium":true,
+        "paymentToken":null,
+        "coins":35
+    },
+    {
+        "username":"simonhack",
+        "email":"simonhack@gmail.com",
+        "password":"Simonhack123!",
+        "favorites":[],
+        "premium":true,
+        "paymentToken":null,
+        "coins":38
+    },
+    {
+        "username":"wilson",
+        "email":"wilson@gmail.com",
+        "password":"Wilson123!",
+        "favorites":[],
+        "premium":true,
+        "paymentToken":null,
+        "coins":44
+    }
+]
