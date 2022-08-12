@@ -12,26 +12,35 @@ async function main() {
 
     // Retrieve all runs
     const runs = await Run.find()
+    const users =  await User.find()
 
-    async function mapRunUser(runUser) {
-        console.log('mapRunUser', runUser)
-        const use = await User.findOne({ id: runUser })
-
-        if (gam === null) {
-            throw new Error('EGAM_MISMATCHING')
-        }
-
-        console.log('use._id=', use._id)
-
-        return use._id // Category._id
+    async function getRandomUserID(userslist){
+        return userslist[Math.floor(Math.random() * userslist.length)]._id;
     }
 
-    //updater les runs:
-    // pour chaque run, aller chercher le Category.id correspondant au Run.category
-    let count = 0
+    console.log('users=',users)
+
+
+
+    // async function mapRunUser(runUser) {
+    //     console.log('mapRunUser', runUser)
+
+    //     if (use === null) {
+    //         throw new Error('EGAM_MISMATCHING')
+    //     }
+
+    //     console.log('use._id=', use._id)
+
+    //     return use._id // Category._id
+    // }
+
+    // //updater les runs:
+    // // pour chaque run, aller chercher le Category.id correspondant au Run.category
+    // let count = 0
     for (let run of runs) {
         console.log('run.user_id=', run.user_id)
-        const _id = await mapRunGame(run.user_id).catch((err) => {
+        
+        const _id = await getRandomUserID(users).catch((err) => {
 
             console.log("err=", err)
             
