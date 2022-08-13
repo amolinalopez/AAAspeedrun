@@ -1011,8 +1011,8 @@ $$ |
 $$ |                                                      
 \__|                                                       */
 
-.profile {
-  margin-inline: 20px;
+.profile-mobile {
+  margin-inline: 5px;
 }
 
 .userSection h1,
@@ -1031,34 +1031,9 @@ $$ |
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 150px;
+  height: 150px;
 }
-
-
-
-/* DESKTOP */
-/* #profile-userImg-desktop { */
-  /* all */
-  /* border-radius: 50%; */
-  /* box-shadow: 0 10px 50px rgb(235 25 110);  */
-  
-  /* desktop */
-  /* width: 150px; */
-
-/* } */
-
-
-/* MEDIA QUERIES to change img user*/
-/* @media screen and (max-width: 390px) {
-} */
-/* @media screen and (max-width: 1160px) {
-  .navbar-desktop {
-    display: none;
-  }
-  .navbar-mobile {
-    display: block;
-  }
-} */
 
 .userSection {
   background-color: #454545;
@@ -1067,39 +1042,84 @@ $$ |
   margin-top: 10px;
 }
 
-.userSection h1, h3 {
+.userSection h1,
+h3 {
   margin: 10px;
 }
 
-.profile-user-runs{
+.profile-user-runs {
   flex-direction: column;
   align-items: center;
-
 }
 
 .profile-run {
   background-color: #2b292b;
-  border-radius: 30px;
+  border-radius: 20px;
 
   padding: 10px;
   margin-top: 10px;
-  overflow:auto;
+  overflow: auto;
 
   display: flex;
-  justify-content: space-between;
-
-
+  /* justify-content: space-between; */
 }
 
 .profile-run img {
+  height: 90px;
   width: 90px;
   border-radius: 10px;
-  margin-right: 10px;
+  margin-right: 5px;
   /* float:left; */
   display: inline;
 }
 
-.profile-run h3,h4 {
+.profile-run > h4 {
   display: inline;
-  background-color: red;
-} 
+  /* background-color: red; */
+  /* padding-inline: 5px; */
+  margin-inline: 5px;
+}
+
+.profile-run-info {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+}
+.profile-run-info h5 {
+  margin: 0px;
+  padding-top: 4px;
+  /* background-color: rgb(16, 172, 239); */
+}
+
+.profile-run-info img {
+  margin: 0px;
+  padding: 5px;
+  width: 100px;
+  display: inline;
+}
+
+.fa-youtube {
+  color: red;
+}
+
+/* DESKTOP */
+/* #profile-userImg-desktop {
+  /* all  */
+/* border-radius: 50%; */
+/* box-shadow: 0 10px 50px rgb(235 25 110);  */
+
+/* desktop */
+/* width: 150px; */
+
+/* } */
+
+/* MEDIA QUERIES to change img user*/
+
+@media screen and (max-width: 404px) {
+  .profile-desktop {
+    display: none;
+  }
+  .profile-mobile {
+    display: block;
+  }
+}
