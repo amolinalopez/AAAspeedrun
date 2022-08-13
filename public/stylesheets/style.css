@@ -13,7 +13,6 @@
   --main-font: "Chakra Petch";
 }
 
-
 body {
   padding: 0;
   margin: 0;
@@ -25,7 +24,6 @@ body {
   /* background-color: var(--background-dark);; */
 
   background-color: var(--background-dark);
-
 }
 
 /* 
@@ -558,6 +556,63 @@ $$ |
 \__|                                                                    
                        */
 
+/* PREMIUM */
+.premium-container {
+  width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+}
+
+.premium-container h1 {
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px rgb(99, 10, 80), 0 0 20px rgb(99, 10, 80),
+    0 0 40px rgb(99, 10, 80), 0 0 80px rgba(250, 0, 196, 0.469),
+    0 0 90px rgba(250, 0, 196, 0.469), 0 0 100px rgba(250, 0, 196, 0.469),
+    0 0 150px rgba(250, 0, 196, 0.469);
+}
+
+/*.card-3d-wrap ul li {
+<<<<<<< HEAD
+=======
+.card-3d-wrap ul li {
+>>>>>>> 65d33d415300153d491f7a6a944087a2edddfa0a
+  list-style: inside;
+  color: white;
+  list-style-type: none;
+}*/
+
+.purchase-choice h2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* .premium-choice-btn{
+} */
+
+.pay-abo:hover {
+  background-color: #380b37;
+  cursor: pointer;
+  color: var(--white);
+  transition: all 0.2s ease-in-out;
+}
+
+/* 
+
+                                                                 $$\     
+                                                                 $$ |    
+$$$$$$\   $$$$$$\  $$\   $$\ $$$$$$\$$$$\   $$$$$$\  $$$$$$$\ $$$$$$\   
+$$  __$$\  \____$$\ $$ |  $$ |$$  _$$  _$$\ $$  __$$\ $$  __$$\\_$$  _|  
+$$ /  $$ | $$$$$$$ |$$ |  $$ |$$ / $$ / $$ |$$$$$$$$ |$$ |  $$ | $$ |    
+$$ |  $$ |$$  __$$ |$$ |  $$ |$$ | $$ | $$ |$$   ____|$$ |  $$ | $$ |$$\ 
+$$$$$$$  |\$$$$$$$ |\$$$$$$$ |$$ | $$ | $$ |\$$$$$$$\ $$ |  $$ | \$$$$  |
+$$  ____/  \_______| \____$$ |\__| \__| \__| \_______|\__|  \__|  \____/ 
+$$ |                $$\   $$ |                                           
+$$ |                \$$$$$$  |                                           
+\__|                 \______/                                            
+ */
+
 .center-wrap-abo {
   padding: 30px;
   display: block;
@@ -582,15 +637,14 @@ $$ |
   transform-origin: center top;
 }
 
-.card-front-abo ul{
+.card-front-abo ul {
   padding: 0;
   text-align: center;
 }
 
-.card-front-abo h3{
+.card-front-abo h3 {
   text-align: center;
 }
-
 
 .card-front-abo li {
   text-decoration: none;
@@ -650,77 +704,11 @@ $$ |
   right: 10px;
 }
 
-
 /* Image LOGO card Scheme */
 
 .paymentMethode {
   width: 19em;
- 
 }
-
-
-
-
-
-
-
-/* PREMIUM */
-.premium-container {
-  width: 400px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  padding-top: 80px;
-}
-
-.premium-container h1 {
-  color: #fff;
-  text-shadow: 0 0 5px #fff, 0 0 10px rgb(99, 10, 80), 0 0 20px rgb(99, 10, 80),
-    0 0 40px rgb(99, 10, 80), 0 0 80px rgba(250, 0, 196, 0.469),
-    0 0 90px rgba(250, 0, 196, 0.469), 0 0 100px rgba(250, 0, 196, 0.469),
-    0 0 150px rgba(250, 0, 196, 0.469);
-}
-
-/*.card-3d-wrap ul li {
-<<<<<<< HEAD
-=======
-.card-3d-wrap ul li {
->>>>>>> 65d33d415300153d491f7a6a944087a2edddfa0a
-  list-style: inside;
-  color: white;
-  list-style-type: none;
-}*/
-
-.purchase-choice h2 {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-/* .premium-choice-btn{
-} */
-
-
-.pay-abo:hover {
-  background-color: #380b37;
-  cursor: pointer;
-  color: var(--white);
-  transition: all 0.2s ease-in-out;
-}
-
-/* 
-
-                                                                 $$\     
-                                                                 $$ |    
-$$$$$$\   $$$$$$\  $$\   $$\ $$$$$$\$$$$\   $$$$$$\  $$$$$$$\ $$$$$$\   
-$$  __$$\  \____$$\ $$ |  $$ |$$  _$$  _$$\ $$  __$$\ $$  __$$\\_$$  _|  
-$$ /  $$ | $$$$$$$ |$$ |  $$ |$$ / $$ / $$ |$$$$$$$$ |$$ |  $$ | $$ |    
-$$ |  $$ |$$  __$$ |$$ |  $$ |$$ | $$ | $$ |$$   ____|$$ |  $$ | $$ |$$\ 
-$$$$$$$  |\$$$$$$$ |\$$$$$$$ |$$ | $$ | $$ |\$$$$$$$\ $$ |  $$ | \$$$$  |
-$$  ____/  \_______| \____$$ |\__| \__| \__| \_______|\__|  \__|  \____/ 
-$$ |                $$\   $$ |                                           
-$$ |                \$$$$$$  |                                           
-\__|                 \______/                                            
- */
 
 /* 
 
@@ -814,7 +802,6 @@ $$$$$$$$\\$$$$$$  |\$$$$$$$ |$$$$$$\ $$ |  $$ |      \$$$$$$  |$$ |\$$$$$$$ |$$ 
 
 .card-signUp {
   transform: rotateY(180deg);
-
 }
 
 .center-wrap {
@@ -976,7 +963,7 @@ $$$$$$$$\\$$$$$$  |\$$$$$$$ |$$$$$$\ $$ |  $$ |      \$$$$$$  |$$ |\$$$$$$$ |$$ 
 
 /* PAYMENT */
 
- #show-pwd-btn {
+#show-pwd-btn {
   font-size: 17px;
   background: none;
   border: none;
@@ -1011,3 +998,108 @@ $$$$$$$$\\$$$$$$  |\$$$$$$$ |$$$$$$\ $$ |  $$ |      \$$$$$$  |$$ |\$$$$$$$ |$$ 
   left: 40%;
 }
 
+/* 
+                             $$$$$$\   $$\ $$\           
+                             $$ __$$\  \__|$$ |          
+$$$$$$\   $$$$$$\   $$$$$$\  $$ /  \_|  $$\ $$ | $$$$$$\  
+$$  __$$\ $$  __$$\ $$  __$$\ $$$$\     $$ |$$ |$$  __$$\ 
+$$ /  $$ |$$ |  \__|$$ /  $$ |$$  _|    $$ |$$ |$$$$$$$$ |
+$$ |  $$ |$$ |      $$ |  $$ |$$ |      $$ |$$ |$$   ____|
+$$$$$$$  |$$ |      \$$$$$$  |$$ |      $$ |$$ |\$$$$$$$\ 
+$$  ____/ \__|       \______/ \__|      \__|\__| \_______|
+$$ |                                                      
+$$ |                                                      
+\__|                                                       */
+
+.profile {
+  margin-inline: 20px;
+}
+
+.userSection h1,
+.userCountry {
+  text-align: center;
+}
+
+/* MOBILE */
+.profile-UserImg-mobile {
+  /* all */
+  border-radius: 50%;
+  box-shadow: 0 10px 50px rgb(235 25 110);
+
+  /* mobile */
+  margin: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+
+/* DESKTOP */
+/* #profile-userImg-desktop { */
+  /* all */
+  /* border-radius: 50%; */
+  /* box-shadow: 0 10px 50px rgb(235 25 110);  */
+  
+  /* desktop */
+  /* width: 150px; */
+
+/* } */
+
+
+/* MEDIA QUERIES to change img user*/
+/* @media screen and (max-width: 390px) {
+} */
+/* @media screen and (max-width: 1160px) {
+  .navbar-desktop {
+    display: none;
+  }
+  .navbar-mobile {
+    display: block;
+  }
+} */
+
+.userSection {
+  background-color: #454545;
+  border-radius: 30px;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.userSection h1, h3 {
+  margin: 10px;
+}
+
+.profile-user-runs{
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.profile-run {
+  background-color: #2b292b;
+  border-radius: 30px;
+
+  padding: 10px;
+  margin-top: 10px;
+  overflow:auto;
+
+  display: flex;
+  justify-content: space-between;
+
+
+}
+
+.profile-run img {
+  width: 90px;
+  border-radius: 10px;
+  margin-right: 10px;
+  /* float:left; */
+  display: inline;
+}
+
+.profile-run h3,h4 {
+  display: inline;
+  background-color: red;
+} 
