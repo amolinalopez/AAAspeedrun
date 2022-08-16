@@ -15,7 +15,9 @@
   {{#each games}}
   cover:<img src={{cover}}>
   title:{{title}}
-  categories:{{categoriesID.name}}
+  {{#each this.categoriesID}}
+  categories:{{name}}
+  {{/each}}
   {{/each }}
 </div>
 <!--TEST ALAN -->

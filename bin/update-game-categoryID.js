@@ -33,7 +33,7 @@ async function main() {
             console.log("results=",results)
         }
 
-        return results// Category._id
+        return results // Category._id
     }
 
     //updater les runs:
@@ -53,8 +53,9 @@ async function main() {
                 game.remove()
             }
         })
-        console.log('_id=', _id)
+        //console.log('_id=', _id)
         for (let i=0;i<_id.length;i++){
+            console.log("game",game)
             game.categoriesID.push(_id[i])
         }
         // maj run
@@ -65,5 +66,5 @@ async function main() {
 
 }
 
-//on oublie pas d'appeler la fonction qu'on vient de crÃ©er!
+//on oublie pas d'appeler la fonction qu'on vient de créer!
 main().catch(err => console.log(err))

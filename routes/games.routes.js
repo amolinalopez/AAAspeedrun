@@ -10,7 +10,7 @@ router.get("/list", (req, res, next) => {
   Game.find().limit(20)
     .populate("categoriesID")
     .then((gamesFromDB) => { 
-      //console.log("gamesfromdb:",gamesFromDB)
+      console.log("gamesfromdb:",gamesFromDB)
       res.render('games',{games:gamesFromDB}) })
 
 });
