@@ -417,7 +417,7 @@ input::placeholder {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 32rem;
-  height: 25rem;
+  height: 30rem;
 }
 
 .hello-container h1 {
@@ -574,10 +574,8 @@ $$ |
 }
 
 /*.card-3d-wrap ul li {
-<<<<<<< HEAD
-=======
+
 .card-3d-wrap ul li {
->>>>>>> 65d33d415300153d491f7a6a944087a2edddfa0a
   list-style: inside;
   color: white;
   list-style-type: none;
