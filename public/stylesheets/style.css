@@ -416,7 +416,7 @@ input::placeholder {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 16rem;
+  width: 32rem;
   height: 25rem;
 }
 
@@ -1064,10 +1064,10 @@ h3 {
 
   padding: 10px;
   margin-top: 10px;
-  overflow: auto;
+  /* overflow: auto; */
 
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   min-width: 350px;
 
 }
