@@ -2,6 +2,13 @@
 
 profile
 
-coucou YOU {{user.name}}
+{{!-- TEST ALAN --}}
+{{#if user}}
+coucou
+{{user.username}}
+{{else}}
+<p>please log in</p>
+{{/if}}
+{{!-- TEST ALAN --}}
 
 

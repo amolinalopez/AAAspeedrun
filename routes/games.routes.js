@@ -21,6 +21,8 @@ router.get("/edit", (req, res, next) => {
   });
 
 router.get("/:id",(req,res,next)=>{
+  Game.findById(req.params.id)
+  .populate("categories")
     res.render("game")
 })
 
