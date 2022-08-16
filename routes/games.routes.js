@@ -7,9 +7,11 @@ const Game = require('../models/Game.model.js')
 const router = require("express").Router();
 
 router.get("/list", (req, res, next) => {
-  Game.find()
-    .populate(categories)
-    .then(() => { res.render('games') })
+  Game.find().limit(20)
+    .populate("categoriesID")
+    .then((gamesFromDB) => { 
+      //console.log("gamesfromdb:",gamesFromDB)
+      res.render('games',{games:gamesFromDB}) })
 
 });
 
@@ -19,8 +21,8 @@ router.get("/new", (req, res, next) => {
 
 router.get("/:id/edit", (req, res, next) => {
   Game.findById(req.params.id)
-  .then(()=>{
-    res.render("game-edit");
+  .then((gameFromDB)=>{
+    res.render("game-edit",{game:gameFromDB});
   })
 });
 
@@ -31,7 +33,10 @@ router.post("/:id/edit",(req,res,next)=>{
 router.get("/:id", (req, res, next) => {
   Game.findById(req.params.id)
     .populate("categories")
-  res.render("game")
+    .then((gameFromDB)=>{
+      res.render("game",{game:gameFromDB})
+    })
+  
 })
 
 module.exports = router;

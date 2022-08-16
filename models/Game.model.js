@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+const Category = require('../models/Categories.model.js')
 
 const gameSchema = new Schema(
   {
@@ -7,7 +8,7 @@ title:String,
 year:Number,
 platforms:Array,
 cover:Object,
-categoriesID:Array,
+categoriesID:{ type: Schema.Types.ObjectId, ref: 'Category' },
 categories_id:Array,
 
   }, { timestamps: true, });
