@@ -6,6 +6,7 @@ router.get("/", (req, res, next) => {
   Runs.find().sort({date:-1}).limit(20)
   .populate("categoryID")
   .populate("gameID")
+  .populate("userID")
   .then(allRunsFromDB=>{
     console.log("allRunsFromDB:",allRunsFromDB)
     res.render("homepage",{runs:allRunsFromDB})
