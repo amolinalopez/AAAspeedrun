@@ -11,7 +11,7 @@ icone.addEventListener('click', function(){
 
 
 
-//LOG IN ------- Voir en text le MDP 
+//LOG IN ------- Voir le mdp en text 
 let passwordInput = document.getElementById('typedPwd')
 let toggle = document.getElementById('show-pwd-btn')
 let icon = document.getElementById('eyeToggle');
@@ -26,8 +26,6 @@ function MyPwdShow(){
       }
     }
         
-    // function check_Pwd_Similarities() {
-    //     coming soon ...
-    // }
+
     
     
