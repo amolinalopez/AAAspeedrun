@@ -8,7 +8,7 @@ title:String,
 year:Number,
 platforms:Array,
 cover:Object,
-categoriesID:{ type: Schema.Types.ObjectId, ref: 'Category' },
+categoriesID:[{ type: Schema.Types.ObjectId, ref: 'Category' }],
 categories_id:Array,
 
   }, { timestamps: true, });
