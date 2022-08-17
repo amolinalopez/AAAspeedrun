@@ -7,7 +7,7 @@ const Game = require('../models/Game.model.js')
 const router = require("express").Router();
 
 router.get("/list", (req, res, next) => {
-  Game.find().limit(20)
+  Game.find().limit(30)
     .populate("categoriesID")
     .then((gamesFromDB) => { 
       console.log("gamesfromdb:",gamesFromDB)
