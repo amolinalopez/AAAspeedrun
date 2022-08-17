@@ -16,7 +16,9 @@ const users = usersData.filter((el) => el).map((el) => {
       password: hashedPassword,
       premium:el.premium,
       paymentToken:el.paymentToken,
-      coins:el.coins
+      coins:el.coins,
+      avatar:el.avatar,
+      country:el.country,
   }
 })
 

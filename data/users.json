@@ -6,7 +6,9 @@
         "favorites": [],
         "premium": true,
         "paymentToken": null,
-        "coins": 55
+        "coins": 55,
+        "avatar": "https://i.pinimg.com/originals/e6/dc/33/e6dc336c9e45d825db8fe7305ed729ee.png",
+        "country": "Mexico"
     },
     {
         "username": "lescata",
@@ -15,7 +17,9 @@
         "favorites": [],
         "premium": true,
         "paymentToken": null,
-        "coins": 69
+        "coins": 69,
+        "avatar":"https://styles.redditmedia.com/t5_2th52/styles/communityIcon_ol74atn322591.png?width=256&s=e2b2853966205e886aa3a39b21864a84df9260f5",
+        "country":"USA"
     },
     {
         "username": "aroger",
@@ -24,60 +28,74 @@
         "favorites": [],
         "premium": true,
         "paymentToken": null,
-        "coins": 42
+        "coins": 42,
+        "avatar":"https://www.henrychalfant.com/wp-content/uploads/2014/05/web_13Woody.jpg",
+        "country":"France"
     },
     {
-        "username":"abernier",
-        "email":"abernier@gmail.com",
-        "password":"Abernier123!",
-        "favorites":[],
-        "premium":true,
-        "paymentToken":null,
-        "coins":77
+        "username": "abernier",
+        "email": "abernier@gmail.com",
+        "password": "Abernier123!",
+        "favorites": [],
+        "premium": true,
+        "paymentToken": null,
+        "coins": 77,
+        "avatar": "https://media.istockphoto.com/photos/handshake-picture-id1014969106?k=20&m=1014969106&s=612x612&w=0&h=UQikqfWFN160CcJrDAtLFsbSzp_i7xKk97AzLJRLmKs=",
+        "country": "Italia"
     },
     {
-        "username":"benamzz",
-        "email":"benamzz@gmail.com",
-        "password":"Benamzz123!",
-        "favorites":[],
-        "premium":true,
-        "paymentToken":null,
-        "coins":20
+        "username": "benamzz",
+        "email": "benamzz@gmail.com",
+        "password": "Benamzz123!",
+        "favorites": [],
+        "premium": true,
+        "paymentToken": null,
+        "coins": 20,
+        "avatar":"https://img.freepik.com/photos-gratuite/pizza-mixte-divers-ingredients_140725-3790.jpg?w=2000&t=st=1660745076~exp=1660745676~hmac=c2714327b3e007f7bc124f4aea5b8a3e291dc3cf4b6f79c19aaef64a483211b4",
+        "country": "Morocco"
     },
     {
-        "username":"cecile",
-        "email":"cecile@gmail.com",
-        "password":"Cecile123!",
-        "favorites":[],
-        "premium":true,
-        "paymentToken":null,
-        "coins":18
+        "username": "cecile",
+        "email": "cecile@gmail.com",
+        "password": "Cecile123!",
+        "favorites": [],
+        "premium": true,
+        "paymentToken": null,
+        "coins": 18,
+        "avatar":"https://images.unsplash.com/photo-1587910234573-d6fc84743bc8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lybCUyMGV5ZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60",
+        "country": "Sweden"
     },
     {
-        "username":"jossuha",
-        "email":"jossuha@gmail.com",
-        "password":"Jossuha123!",
-        "favorites":[],
-        "premium":true,
-        "paymentToken":null,
-        "coins":35
+        "username": "jossuha",
+        "email": "jossuha@gmail.com",
+        "password": "Jossuha123!",
+        "favorites": [],
+        "premium": true,
+        "paymentToken": null,
+        "coins": 35,
+        "avatar":"https://media.routard.com/image/47/2/pt17464.1229472.w630.jpg",
+        "country":"Japan"
     },
     {
-        "username":"simonhack",
-        "email":"simonhack@gmail.com",
-        "password":"Simonhack123!",
-        "favorites":[],
-        "premium":true,
-        "paymentToken":null,
-        "coins":38
+        "username": "simonhack",
+        "email": "simonhack@gmail.com",
+        "password": "Simonhack123!",
+        "favorites": [],
+        "premium": true,
+        "paymentToken": null,
+        "coins": 38,
+        "avatar": "https://i.ytimg.com/vi/Ux5cQbO_ybw/maxresdefault.jpg",
+        "country": "Germany"
     },
     {
-        "username":"wilson",
-        "email":"wilson@gmail.com",
-        "password":"Wilson123!",
-        "favorites":[],
-        "premium":true,
-        "paymentToken":null,
-        "coins":44
+        "username": "wilson",
+        "email": "wilson@gmail.com",
+        "password": "Wilson123!",
+        "favorites": [],
+        "premium": true,
+        "paymentToken": null,
+        "coins": 44,
+        "avatar": "https://image.winudf.com/v2/image/Y29tLmJhbGVmb290Lk1vbmtleURMdWZmeVdhbGxwYXBlcl9zY3JlZW5fMF8xNTI0NTE5MTEwXzAyOA/screen-0.jpg?fakeurl=1&type=.jpg",
+        "country": "Korea"
     }
 ]
