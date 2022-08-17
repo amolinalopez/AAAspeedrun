@@ -807,7 +807,7 @@ $$$$$$$$\\$$$$$$  |\$$$$$$$ |$$$$$$\ $$ |  $$ |      \$$$$$$  |$$ |\$$$$$$$ |$$ 
   display: block;
 }
 
-/* texts */
+/* Textes */
 .auth-container h2 {
   text-align: center;
   color: var(--white);
@@ -885,7 +885,6 @@ $$$$$$$$\\$$$$$$  |\$$$$$$$ |$$$$$$\ $$ |  $$ |      \$$$$$$  |$$ |\$$$$$$$ |$$ 
 }
 
 /* FORMS */
-
 .auth-container form {
   display: flex;
   flex-direction: column;
@@ -944,7 +943,7 @@ $$$$$$$$\\$$$$$$  |\$$$$$$$ |$$$$$$\ $$ |  $$ |      \$$$$$$  |$$ |\$$$$$$$ |$$ 
   transition: all 0.5s ease;
 }
 
-/* fot the ball to go as far as the end of the lable */
+/* fot the ball to go as far as the end of the label */
 .checkbox:checked + label:before {
   transform: translateX(130px);
 }
@@ -958,8 +957,6 @@ $$$$$$$$\\$$$$$$  |\$$$$$$$ |$$$$$$\ $$ |  $$ |      \$$$$$$  |$$ |\$$$$$$$ |$$ 
   color: purple;
   text-decoration: none;
 }
-
-/* PAYMENT */
 
 #show-pwd-btn {
   font-size: 17px;
@@ -1007,21 +1004,20 @@ $$$$$$$  |$$ |      \$$$$$$  |$$ |      $$ |$$ |\$$$$$$$\
 $$  ____/ \__|       \______/ \__|      \__|\__| \_______|
 $$ |                                                      
 $$ |                                                      
-\__|                                                       */
+\__|        
 
-
-.profile-mobile {
-  margin-inline: 5px;
-
+*/
+.profile-page {
+  margin-inline: 0px;
 }
 
 .userSection h1,
-.userCountry {
+.userInfo {
   text-align: center;
 }
 
 /* MOBILE */
-.profile-UserImg-mobile {
+.profile-UserImg {
   /* all */
   border-radius: 50%;
   box-shadow: 0 10px 50px rgb(235 25 110);
@@ -1036,7 +1032,7 @@ $$ |
 }
 
 .userSection {
-  background-color: #454545;
+  /* background-color: #454545; */
   border-radius: 30px;
   padding: 5px;
   margin-top: 10px;
@@ -1053,21 +1049,19 @@ h3 {
   align-items: center;
   /* min-width: 350px;
   max-width: 390px; */
-
 }
 
 .profile-run {
   background-color: #2b292b;
   border-radius: 20px;
 
-  padding: 10px;
+  padding: 5px;
   margin-top: 10px;
   /* overflow: auto; */
 
   display: flex;
   justify-content: space-around;
   min-width: 350px;
-
 }
 
 .profile-run img {
@@ -1091,6 +1085,17 @@ h3 {
   display: flex;
   justify-content: space-around;
 }
+
+
+.userInfo {
+  padding-left: 0;
+}
+.userInfo li{
+  /* border: 2px solid yellow; */
+  list-style: none;
+  text-align: center;
+}
+
 .profile-run-info h5 {
   margin: 0px;
   padding-top: 4px;
@@ -1108,24 +1113,71 @@ h3 {
   color: red;
 }
 
-/* DESKTOP */
-/* #profile-userImg-desktop {
-  /* all  */
-/* border-radius: 50%; */
-/* box-shadow: 0 10px 50px rgb(235 25 110);  */
+/* DESKTOP -------------------------------------- */
 
-/* desktop */
-/* width: 150px; */
-
-/* } */
-
-/* MEDIA QUERIES to change img user*/
-
-@media screen and (max-width: 404px) {
-  .profile-desktop {
-    display: none;
+/* MEDIA QUERIES to change page*/
+@media (min-width: 660px) {
+  .userSection {
+    display: flex;
   }
-  .profile-mobile {
-    display: block;
+
+  .flex-child {
+    border: 2px solid yellow;
+    flex: 1;
+  }
+
+  .one {
+    flex: 1;
+    margin-right: 40px;
+
+  }
+
+  .two {
+    margin-right: 40px;
+
+    flex: 1;
+  }
+
+  .profile-page {
+    margin-inline: 50px;
+    margin-top: 50px;
+  }
+
+  .userSection h1{
+    border: 2px red solid;
+    text-align: left;
+    font-size: 35px;
+    /* margin-left: auto;
+    margin-right: auto; */
+
+  }
+
+  #greetings {
+    margin-bottom: 10px ;
+    border: 2px red solid;
+
+  }
+
+  .userInfo li{
+    border: 2px red solid;
+    text-align: left;
+    margin-top: 10%;
+  }
+
+  .profile-userImg {
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 300px;
+  }
+
+
+
+
+
+
+  .profile-run{
+    border: 2px red solid;
   }
 }

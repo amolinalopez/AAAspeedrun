@@ -10,16 +10,16 @@ function timeDifferentGreetings(hour) {
 
   switch (true) {
     case hour > 6 && hour < 12:
-      greeting.textContent = "Rise and shine ✨,";
+      greeting.textContent = "Rise and shine ✨ ";
       break;
     case hour >= 12 && hour < 18:
-      greeting.textContent = "Good afternoon,";
+      greeting.textContent = "Good afternoon ☀️ ";
       break;
     case hour < 23:
-      greeting.textContent = "Evening,";
+      greeting.textContent = "Evening 🌘 ";
       break;
     default:
-      greeting.textContent = "Time for bed,";
+      greeting.textContent = "Time for bed 😴 ";
       break;
   }
 }
