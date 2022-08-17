@@ -50,7 +50,7 @@ async function main() {
         // maj run
         run.categoryID = _id
         console.log("run:",run)
-       // await run.save()
+        await run.save()
     }
     
 }
