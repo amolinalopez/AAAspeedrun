@@ -1031,6 +1031,10 @@ $$ |
   height: 150px;
 }
 
+#greetings {
+  display: block;
+}
+
 .userSection {
   /* background-color: #454545; */
   border-radius: 30px;
@@ -1076,24 +1080,26 @@ h3 {
 .profile-run > h4 {
   display: inline;
   /* background-color: red; */
-  /* padding-inline: 5px; */
   margin-inline: 5px;
+}
+
+.userInfo {
+  padding-left: 0;
+  margin-right: 5px;
+  margin-left: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+.userInfo li{
+  /* border: 2px solid yellow; */
+  list-style: none;
 }
 
 .profile-run-info {
   flex-wrap: wrap;
   display: flex;
   justify-content: space-around;
-}
-
-
-.userInfo {
-  padding-left: 0;
-}
-.userInfo li{
-  /* border: 2px solid yellow; */
-  list-style: none;
-  text-align: center;
 }
 
 .profile-run-info h5 {
@@ -1116,68 +1122,71 @@ h3 {
 /* DESKTOP -------------------------------------- */
 
 /* MEDIA QUERIES to change page*/
-@media (min-width: 660px) {
+@media (min-width: 900px) {
+
+  .profile-page {
+    margin-inline: 150px;
+    margin-top: 50px;
+  }
+  
+
   .userSection {
     display: flex;
   }
 
   .flex-child {
-    border: 2px solid yellow;
-    flex: 1;
+    /* border: 2px solid yellow; */
+    flex: 2;
+    margin-bottom: 20px;
   }
 
   .one {
     flex: 1;
     margin-right: 40px;
-
   }
 
   .two {
-    margin-right: 40px;
-
-    flex: 1;
-  }
-
-  .profile-page {
-    margin-inline: 50px;
-    margin-top: 50px;
+    flex: 1.5;
+    padding: 30px;
+    background-color: #2b292b;
+    border-radius: 20px;
   }
 
   .userSection h1{
-    border: 2px red solid;
-    text-align: left;
+    /* border: 2px red solid; */
+    /* text-align: left; */
     font-size: 35px;
-    /* margin-left: auto;
-    margin-right: auto; */
-
+    margin: 0;
   }
+
 
   #greetings {
-    margin-bottom: 10px ;
-    border: 2px red solid;
+    /* border: 2px red solid; */
 
+    margin-bottom: 10px ;
+    display: inline;
   }
 
+  .userInfo{
+    margin-top: 15px;   
+    display:block;
+ 
+  }
   .userInfo li{
-    border: 2px red solid;
-    text-align: left;
-    margin-top: 10%;
+    /* border: 2px red solid; */
+    padding-top: 20px;
+    font-size: 22px;
   }
 
   .profile-userImg {
     margin: 20px;
-    margin-left: auto;
-    margin-right: auto;
     width: 300px;
     height: 300px;
+    margin: auto;
+    margin-top: 10px;
   }
 
-
-
-
-
-
   .profile-run{
-    border: 2px red solid;
+    margin-inline: 150px;
   }
 }
