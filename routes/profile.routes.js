@@ -65,7 +65,7 @@ router.post("/login", (req, res, next) => {
         return;
       } else if (bcryptjs.compareSync(password, user.password)) {
         req.session.currentUser = user;
-        res.redirect('/user/profile');
+        res.redirect(`/user/${user._id}`);
       } else {
         res.render('login', { errorMessage: 'Incorrect password.' });
       }
@@ -78,7 +78,21 @@ router.post("/login", (req, res, next) => {
 
 
 /* GET profile page */
-router.get("/profile", (req, res, next) => {
+// router.get("/profile", (req, res, next) => {
+//   console.log("user:", req.session.currentUser)
+//   const user = req.session.currentUser
+//   Runs
+//     .find({ userID: user._id }).sort({ date: -1 }).limit(10)
+//     .populate("userID")
+//     .populate("categoryID")
+//     .populate("gameID")
+//     .then((runsfromDB) => {
+//       res.render("profile", { user: req.session.currentUser, runs: runsfromDB })
+//     });
+// });
+
+
+router.get("/:id", (req, res, next) => {
   console.log("user:", req.session.currentUser)
   const user = req.session.currentUser
   Runs
@@ -93,6 +107,21 @@ router.get("/profile", (req, res, next) => {
 
 router.get("/:id/edit", (req, res, next) => {
   res.render("profile-edit", { user: req.session.currentUser })
+})
+
+router.post("/:id/edit",(req,res,next)=>{
+  const {id} = req.params;
+  const {name,email,avatar,country} = req.body;
+  User.findByIdAndUpdate(id,{name,email,avatar,country},{new:true})
+  .then((updatedUser)=>{
+    console.log(updatedUser)
+    res.redirect(`/user/${updatedUser._id}`)
+  })
+  .catch((err)=>{
+    console.log('error updating game', err)
+    next(err)
+  })
+  
 })
 
 router.get("/:id/favorites", (req, res, next) => {

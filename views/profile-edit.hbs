@@ -1,3 +1,19 @@
 {{!-- HAS TO BE AUTHentificated --}}
 
 profile-edit
+
+<form action="/user/{{user._id}}/edit" method="POST">
+    <label>
+        name:<input type="text" name="name" value={{user.username}} />
+    </label>
+    <label>
+        email:<input type="text" name="email" value={{user.email}} />
+    </label>
+    <label>
+        country:<input type="text" name="country" value={{user.country}} />
+    </label>
+    <label>
+        avatar:<input type="text" name="avatar" value={{user.avatar}} />
+    </label>
+<button type="submit">Save changes</button>
+</form>
