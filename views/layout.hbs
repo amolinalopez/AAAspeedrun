@@ -1,95 +1,92 @@
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <script
-      src="https://kit.fontawesome.com/451a44f98e.js"
-      crossorigin="anonymous"
-    ></script>
+  <script src="https://kit.fontawesome.com/451a44f98e.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-    <link rel="icon" type="image/png" href="images/logoSymbol.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <link rel="icon" type="image/png" href="images/logoSymbol.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap" rel="stylesheet" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap"
-      rel="stylesheet"
-    />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap" rel="stylesheet" />
 
-    <title>AAA Games</title>
+  <title>AAA Games</title>
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <div id="NAVBAR">
-      <!-- navbar Mobile -->
-      <div class="navbar-mobile">
-        <i class="fas fa-bars"></i>
+  <div id="NAVBAR">
+    <!-- navbar Mobile -->
+    <div class="navbar-mobile">
+      <i class="fas fa-bars"></i>
 
-        <div class="modal">
-          <div class="navbar-mobile-list">
-            <a href="/">
-              <img
-                id="logoSymbol"
-                src="/images/logoSymbol.svg"
-                alt="logoSymbol"
-                width="100px"
-              />
-            </a>
-            <a href="/game/list">GAMES</a>
-            <a href="/user/login">LOGIN</a>
-            <a href="/user/signup">SIGN UP</a>
+      <div class="modal">
+        <div class="navbar-mobile-list">
+          <a href="/">
+            <img id="logoSymbol" src="/images/logoSymbol.svg" alt="logoSymbol" width="100px" />
+          </a>
+          <a href="/game/list">GAMES</a>
+          {{#if user}}
+          <form id="logout-form" action="/user/logout" method="POST">
+            <button>Logout</button>
+          </form>
+          {{else}}
+          <a href="/user/login">LOGIN</a>
+          <a href="/user/signup">SIGN UP</a>
+          {{/if}}
 
-            {{! <a href="#">SEARCH 🔍</a> }}
-            <a href="/premium">PREMIUM</a>
-            <a href="/about">ABOUT</a>
-          </div>
+          {{! <a href="#">SEARCH 🔍</a> }}
+          <a href="/premium">PREMIUM</a>
+          <a href="/about">ABOUT</a>
         </div>
       </div>
-
-      <!-- navbar Desktop -->
-      <div class="navbar-desktop">
-        <a href="/">
-          <img src="/images/logoBam.svg" alt="logo" width="180px" />
-        </a>
-        <a href="/game/list">Games</a>
-        <a href="/premium">
-          <img src="/images/medal.svg" alt="premium Subscribe" width="40px" />
-        </a>
-        <div>
-          <input type="search" placeholder="search here" />
-          <button>🔍</button>
-        </div>
-        <a href="/about">About</a>
-        <button>
-          <a href="/user/login">Log In</a>
-        </button>
-        <button>
-          <a href="/user/signup">Sign Up</a>
-
-        </button>
-      </div>
-
     </div>
 
-    {{{body}}}
+    <!-- navbar Desktop -->
+    <div class="navbar-desktop">
+      <a href="/">
+        <img src="/images/logoBam.svg" alt="logo" width="180px" />
+      </a>
+      <a href="/game/list">Games</a>
+      <a href="/premium">
+        <img src="/images/medal.svg" alt="premium Subscribe" width="40px" />
+      </a>
+      <div>
+        <input type="search" placeholder="search here" />
+        <button>🔍</button>
+      </div>
+      <a href="/about">About</a>
+      {{#if user}}
+      <form id="logout-form" action="/user/logout" method="POST">
+        <button>Logout</button>
+      </form>
+      {{else}}
+      <button>
+        <a href="/user/login">Log In</a>
+      </button>
+      <button>
+        <a href="/user/signup">Sign Up</a>
+      </button>
+      {{/if}}
+    </div>
 
-    <script src="/js/cssPage.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="/js/script.js"></script>
-    <script src="/js/gameslist.js"></script>
+  </div>
 
-  </body>
+  {{{body}}}
+
+  <script src="/js/cssPage.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="/js/script.js"></script>
+  <script src="/js/gameslist.js"></script>
+
+</body>
 
 </html>

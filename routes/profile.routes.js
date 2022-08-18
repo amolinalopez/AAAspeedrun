@@ -16,8 +16,8 @@ router.post("/signup", (req, res, next) => {
   const { username, email, password, confirmPassword } = req.body
   const hashedPassword = bcryptjs.hashSync(password, salt)
   console.log('Hashed Password=', hashedPassword)
-  if (password != confirmPassword){
-    res.render('signup',{errorMessage:'Password and confirmation must match, please try again.'});
+  if (password != confirmPassword) {
+    res.render('signup', { errorMessage: 'Password and confirmation must match, please try again.' });
     console.log("wrong confirmation")
     return
   }
@@ -39,7 +39,7 @@ router.post("/signup", (req, res, next) => {
       res.render('signup')
     })
     .catch(err => {
-      console.log("err:",err)
+      console.log("err:", err)
       next(err)
     })
 })
@@ -65,15 +65,15 @@ router.post("/login", (req, res, next) => {
         return;
       } else if (bcryptjs.compareSync(password, user.password)) {
         req.session.currentUser = user;
-        console.log("res.redirect")
         res.redirect('/user/profile');
       } else {
         res.render('login', { errorMessage: 'Incorrect password.' });
       }
     })
     .catch(error => {
-      console.log("err=",err)
-      next(error)});
+      console.log("err=", error)
+      next(error)
+    });
 });
 
 
@@ -82,7 +82,7 @@ router.get("/profile", (req, res, next) => {
   console.log("user:", req.session.currentUser)
   const user = req.session.currentUser
   Runs
-    .find({ userID: user._id }).sort({date:-1}).limit(10)
+    .find({ userID: user._id }).sort({ date: -1 }).limit(10)
     .populate("userID")
     .populate("categoryID")
     .populate("gameID")
@@ -98,5 +98,14 @@ router.get("/:id/edit", (req, res, next) => {
 router.get("/:id/favorites", (req, res, next) => {
   res.render("profile-fav", { user: req.session.currentUser });
 });
+
+
+/* POST logout page */
+
+router.post('/logout', (req, res) => {
+  req.session.destroy();
+  res.redirect('/');
+});
+
 
 module.exports = router;
