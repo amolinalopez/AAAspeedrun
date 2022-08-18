@@ -30,7 +30,7 @@ const index = require("./routes/index.routes");
 app.use("/", index);
 
 const profile = require("./routes/profile.routes");
-app.use("/profile", profile);
+app.use("/user", profile);
 
 const game = require("./routes/games.routes");
 app.use("/game", game);

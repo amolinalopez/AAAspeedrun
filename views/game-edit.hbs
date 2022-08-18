@@ -1,1 +1,13 @@
 game-edit
+<form action="/game/{{game._id}}/edit" method="POST">
+    <label>
+        Title:<input type="text" name="title" value={{game.title}} />
+    </label>
+    <label>
+        Year:<input type="number" name="year" value={{game.year}} />
+    </label>
+    <label>
+        Cover:<input type="text" name="cover" value={{game.cover}} />
+    </label>
+<button type="submit">Save changes</button>
+</form>

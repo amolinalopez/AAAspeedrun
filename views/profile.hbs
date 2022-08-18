@@ -9,7 +9,19 @@
         yes
         {{/if}}
     email:{{user.email}}
-
+   avatar: <img src={{user.avatar}}>
+    country:{{user.country}}
+</div>
+<div>
+    {{#each runs}}
+    /////////////
+    time:{{time_seconds}}
+    date:{{date}}
+    video:{{video}}
+    category:{{categoryID.name}}
+    game:{{gameID.title}}
+    //////////////
+{{/each}}    
 </div>
 <!--TEST ALAN -->
 
