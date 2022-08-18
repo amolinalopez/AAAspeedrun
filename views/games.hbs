@@ -13,8 +13,8 @@
  <div> 
   coucou
   {{#each games}}
+  <a href={{_id}}>title:{{title}}</a>
   cover:<img src={{cover}}>
-  title:{{title}}
   {{#each this.categoriesID}}
   categories:{{name}}
   {{/each}}

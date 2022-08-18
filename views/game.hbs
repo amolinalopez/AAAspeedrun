@@ -1,1 +1,10 @@
 game
+<img src={{game.cover}}>
+{{game.title}}
+<ul>
+{{#each game.categoriesID}}
+<li><a href="#">{{name}}</a></li>
+{{/each}}
+</ul>
+<a href="/game/{{game._id}}/edit">Edit</a>
+
