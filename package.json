@@ -20,7 +20,12 @@
     "morgan": "^1.10.0",
     "node-sass": "^7.0.1",
     "node-speedrun": "^1.2.0",
-    "serve-favicon": "^2.5.0"
+    "serve-favicon": "^2.5.0",
+    "cybersource-rest-client": "0.0.17",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "http-errors": "~1.6.2",
+    "jwk-to-pem": "^2.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"

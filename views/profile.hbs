@@ -41,11 +41,13 @@
           <h1>
             <span id="greetings">
             </span>
-            {{userID.username}}
+            {{user.username}}
           </h1>
            <ul class="userInfo">
-              <li>55 coins</li>
-              <li>Premium 🏅</li>
+              <li>{{user.coins}} coins</li>
+              <li>Premium 🏅 : {{#if user.premium}}
+        yes
+        {{/if}} </li>
               <li>Mexico</li>
             </ul>
       
