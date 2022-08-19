@@ -3,8 +3,9 @@ game
 {{game.title}}
 <ul>
 {{#each game.categoriesID}}
-<li><a href="#">{{name}}</a></li>
+<li><a href="/game/category/{{_id}}">{{name}}</a></li>
 {{/each}}
 </ul>
 <a href="/game/{{game._id}}/edit">Edit</a>
+<a href="/game/{{game._id}}/newcategory">New Category</a>
 

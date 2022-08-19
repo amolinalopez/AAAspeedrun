@@ -1,0 +1,12 @@
+category-new
+
+<h2>Add a new category</h2>
+ 
+<form action="/game/{{game._id}}/newcategory" method="POST">
+  <label>
+    Name:
+    <input type="text" name="name" />
+  </label>
+
+  <button type="submit">Create</button>
+</form>
