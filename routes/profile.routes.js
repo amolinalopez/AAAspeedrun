@@ -96,7 +96,7 @@ router.get("/:id", (req, res, next) => {
   console.log("user:", req.session.currentUser)
   const user = req.session.currentUser
   Runs
-    .find({ userID: user._id }).sort({ date: -1 }).limit(10)
+    .find({ userID: user._id }).sort({ date: -1 })
     .populate("userID")
     .populate("categoryID")
     .populate("gameID")

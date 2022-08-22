@@ -9,6 +9,7 @@
   "dependencies": {
     "axios": "^0.27.2",
     "bcryptjs": "^2.4.3",
+    "connect-mongo": "^4.6.0",
     "cookie-parser": "^1.4.6",
     "cybersource-rest-client": "0.0.17",
     "debug": "~2.6.9",
