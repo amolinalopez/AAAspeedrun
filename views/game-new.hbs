@@ -1,1 +1,24 @@
 game-new
+
+<h2>Add a new game</h2>
+ 
+<form action="/game/new" method="POST">
+  <label>
+    Title:
+    <input type="text" name="title" />
+  </label>
+  
+ 
+  <label>
+    Year:
+    <input type="number" name="year" />
+  </label>
+  
+ 
+  <label>
+    Cover:
+    <input type="text" name="cover"></input>
+  </label>
+
+  <button type="submit">Create</button>
+</form>
