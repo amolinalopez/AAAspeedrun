@@ -1029,3 +1029,200 @@ $$$$$$$$\\$$$$$$  |\$$$$$$$ |$$$$$$\ $$ |  $$ |      \$$$$$$  |$$ |\$$$$$$$ |$$ 
   top: -10px;
   left: 40%;
 }
+
+/* 
+                             $$$$$$\   $$\ $$\           
+                             $$ __$$\  \__|$$ |          
+$$$$$$\   $$$$$$\   $$$$$$\  $$ /  \_|  $$\ $$ | $$$$$$\  
+$$  __$$\ $$  __$$\ $$  __$$\ $$$$\     $$ |$$ |$$  __$$\ 
+$$ /  $$ |$$ |  \__|$$ /  $$ |$$  _|    $$ |$$ |$$$$$$$$ |
+$$ |  $$ |$$ |      $$ |  $$ |$$ |      $$ |$$ |$$   ____|
+$$$$$$$  |$$ |      \$$$$$$  |$$ |      $$ |$$ |\$$$$$$$\ 
+$$  ____/ \__|       \______/ \__|      \__|\__| \_______|
+$$ |                                                      
+$$ |                                                      
+\__|        
+*/
+.profile-page {
+  margin-inline: 0px;
+}
+
+.userSection h1,
+.userInfo {
+  text-align: center;
+}
+
+/* MOBILE */
+.profile-UserImg {
+  /* all */
+  border-radius: 50%;
+  box-shadow: 0 10px 50px rgb(235 25 110);
+
+  /* mobile */
+  margin: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  height: 150px;
+}
+
+#greetings {
+  display: block;
+}
+
+.userSection {
+  /* background-color: #454545; */
+  border-radius: 30px;
+  padding: 5px;
+  margin-top: 10px;
+  min-width: 350px;
+}
+
+.userSection h1,
+h3 {
+  margin: 10px;
+}
+
+.profile-user-runs {
+  flex-direction: column;
+  align-items: center;
+  /* min-width: 350px;
+  max-width: 390px; */
+}
+
+.profile-run {
+  background-color: #2b292b;
+  border-radius: 20px;
+
+  padding: 5px;
+  margin-top: 10px;
+  /* overflow: auto; */
+
+  display: flex;
+  justify-content: space-around;
+  min-width: 350px;
+}
+
+.profile-run img {
+  height: 90px;
+  width: 90px;
+  border-radius: 10px;
+  margin-right: 5px;
+  /* float:left; */
+  display: inline;
+}
+
+.profile-run > h4 {
+  display: inline;
+  /* background-color: red; */
+  margin-inline: 5px;
+}
+
+.userInfo {
+  padding-left: 0;
+  margin-right: 5px;
+  margin-left: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+.userInfo li{
+  /* border: 2px solid yellow; */
+  list-style: none;
+}
+
+.profile-run-info {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+}
+
+.profile-run-info h5 {
+  margin: 0px;
+  padding-top: 4px;
+  /* background-color: rgb(16, 172, 239); */
+}
+
+.profile-run-info img {
+  margin: 0px;
+  padding: 5px;
+  width: 100px;
+  display: inline;
+}
+
+.fa-youtube {
+  color: red;
+}
+
+/* DESKTOP -------------------------------------- */
+
+/* MEDIA QUERIES to change page*/
+@media (min-width: 900px) {
+
+  .profile-page {
+    margin-inline: 150px;
+    margin-top: 50px;
+  }
+  
+
+  .userSection {
+    display: flex;
+  }
+
+  .flex-child {
+    /* border: 2px solid yellow; */
+    flex: 2;
+    margin-bottom: 20px;
+  }
+
+  .one {
+    flex: 1;
+    margin-right: 40px;
+  }
+
+  .two {
+    flex: 1.5;
+    padding: 30px;
+    background-color: #2b292b;
+    border-radius: 20px;
+  }
+
+  .userSection h1{
+    /* border: 2px red solid; */
+    /* text-align: left; */
+    font-size: 35px;
+    margin: 0;
+  }
+
+
+  #greetings {
+    /* border: 2px red solid; */
+
+    margin-bottom: 10px ;
+    display: inline;
+  }
+
+  .userInfo{
+    margin-top: 15px;   
+    display:block;
+ 
+  }
+  .userInfo li{
+    /* border: 2px red solid; */
+    padding-top: 20px;
+    font-size: 22px;
+  }
+
+  .profile-userImg {
+    margin: 20px;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  .profile-run{
+    margin-inline: 150px;
+  }
+}
