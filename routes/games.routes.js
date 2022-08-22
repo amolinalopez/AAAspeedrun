@@ -35,11 +35,36 @@ router.post("/new", (req, res, next) => {
     })
 })
 
+router.get("/category/:id/newrun",(req,res,next)=>{
+  Category.findById(req.params.id)
+  .then((categoryFromDB)=>{
+    res.render("run-new",{category:categoryFromDB})
+  })
+  .catch((err)=>{
+    console.log("err",err)
+    next(err)
+  })
+})
+
+router.post("/category/:id/newrun",(req,res,next)=>{
+  const {userID}=req.session
+  const {time_seconds,video}=req.body
+  Run.create({userID,time_seconds,video,categoryID:req.params.id})
+  .then((createdRun)=>{
+    console.log('run created:',createdRun)
+    res.redirect(`/category/${createdRun.categoryID}`)
+  })
+  .catch((err)=>{
+    console.log("err",err)
+    next(err)
+  })
+})
+
 router.get("/category/:id", (req, res, next) => {
   Category.findById(req.params.id)
     .then((categoryFromDB) => {
       console.log("catfromdb:",categoryFromDB)
-      Run.find({ categoryID: categoryFromDB._id })
+      Run.find({ categoryID: categoryFromDB._id }).sort({time_seconds:1})
         .populate("userID")
         .populate("gameID")
         .then((runsFromDB) => {

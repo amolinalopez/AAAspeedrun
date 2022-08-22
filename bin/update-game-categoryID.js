@@ -12,25 +12,25 @@ async function main() {
 
     // Retrieve all runs
     const games = await Game.find()
-    
+
     async function mapGameCategory(gameCategory) {
         console.log('mapGameCategory', gameCategory)
         const iterator = gameCategory.values()
-        const results=[]
+        const results = []
         for (const value of iterator) {
-            
+
             console.log("value=", value);
             let cat = await Category.findOne({ id: value })
             console.log("cat=", cat)
             if (cat === null) {
-                
+
                 //cat={}
                 throw new Error('ECAT_MISMATCHING')
             }
-            
+
             console.log('cat._id=', cat._id)
             results.push(cat._id)
-            console.log("results=",results)
+            console.log("results=", results)
         }
 
         return results // Category._id
@@ -40,28 +40,27 @@ async function main() {
     // pour chaque run, aller chercher le Category.id correspondant au Run.category
     let count = 0
     for (let game of games) {
-        console.log("game:",game)
+        console.log("game:", game)
         console.log('game.category_id=', game.categories_id)
-        const _id = await mapGameCategory(game.categories_id).catch((err) => {     
-            console.log("err=", err)
-            if (err.message === 'ECAT_MISMATCHING') 
-            //if (cat === {}) 
-            {
-                console.log('remove this one')
-                count += 1
-                console.log("count=", count)
-                game.remove()
-            }
-        })
-        //console.log('_id=', _id)
-        for (let i=0;i<_id.length;i++){
-            console.log("game",game)
+        const _id = await mapGameCategory(game.categories_id)
+            .catch((err) => {
+                console.log("err=", err)
+                if (err.message === 'ECAT_MISMATCHING'){
+                    console.log('remove this one')
+                    count += 1
+                    console.log("count=", count)
+                    game.remove()
+                }
+            })
+        console.log('_id=', _id)
+        for (let i = 0; i < _id.length; i++) {
+            console.log("game", game)
             game.categoriesID.push(_id[i])
         }
         // maj run
-        
+
         console.log("game:", game)
-       // await game.save()
+        await game.save()
     }
 
 }

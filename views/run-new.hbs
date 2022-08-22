@@ -1,0 +1,16 @@
+run-new
+
+<h2>Add a new run</h2>
+ 
+<form action="/game/category/{{category._id}}/newrun" method="POST">
+  <label>
+    Time(seconds):
+    <input type="number" name="time_seconds"/>
+  </label>
+  <label>
+    Video:
+    <input type="text" name="video"/>
+  </label>
+
+  <button type="submit">Create</button>
+</form>

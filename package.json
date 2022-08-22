@@ -10,24 +10,27 @@
     "axios": "^0.27.2",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
+    "cybersource-rest-client": "0.0.17",
+    "debug": "~2.6.9",
     "dotenv": "^16.0.1",
+    "ejs": "~2.5.7",
     "express": "^4.18.1",
     "express-session": "^1.17.3",
     "express-sessions": "^1.0.6",
     "fs": "^0.0.1-security",
     "hbs": "^4.2.0",
+    "http-errors": "~1.6.2",
+    "jwk-to-pem": "^2.0.0",
     "mongoose": "^6.4.6",
     "morgan": "^1.10.0",
     "node-sass": "^7.0.1",
     "node-speedrun": "^1.2.0",
-    "serve-favicon": "^2.5.0",
-    "cybersource-rest-client": "0.0.17",
-    "debug": "~2.6.9",
-    "ejs": "~2.5.7",
-    "http-errors": "~1.6.2",
-    "jwk-to-pem": "^2.0.0"
+    "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
+  },
+  "engines": {
+    "node": "18.4.0"
   }
 }

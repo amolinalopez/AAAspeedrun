@@ -2,12 +2,18 @@ category-details
 
 {{category.name}}
 
+<a href="/game/category/{{category._id}}/newrun">Submit a new run</a>
+{{#if runs}}
 {{#each runs}}
-
-    <a src={{gameID.cover}}></a>
+    <div>
+    <img src={{gameID.cover}}>
     username:{{userID.username}}
     time:{{time_seconds}}
     date:{{date}}
     video:{{video}}
+    </div>
     
 {{/each}}
+{{else}}
+<p>No runs registered for this category yet</p>
+{{/if}}
