@@ -32,7 +32,7 @@
     <div class="flex-child one" >
       <img
         class="profile-userImg"
-        src="https://i.pinimg.com/originals/e6/dc/33/e6dc336c9e45d825db8fe7305ed729ee.png"
+        src="{{user.avatar}}"
         alt="User image"
       />     
     </div>
@@ -48,7 +48,7 @@
               <li>Premium 🏅 : {{#if user.premium}}
         yes
         {{/if}} </li>
-              <li>Mexico</li>
+              <li>{{user.country}}</li>
             </ul>
       
     </div>

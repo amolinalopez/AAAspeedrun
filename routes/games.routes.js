@@ -52,7 +52,7 @@ router.post("/category/:id/newrun",(req,res,next)=>{
   Run.create({userID,time_seconds,video,categoryID:req.params.id})
   .then((createdRun)=>{
     console.log('run created:',createdRun)
-    res.redirect(`/category/${createdRun.categoryID}`)
+    res.redirect(`/game/category/${createdRun.categoryID}`)
   })
   .catch((err)=>{
     console.log("err",err)
