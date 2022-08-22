@@ -61,7 +61,7 @@ async function main() {
         // maj run
         
         console.log("game:", game)
-        await game.save()
+       // await game.save()
     }
 
 }
