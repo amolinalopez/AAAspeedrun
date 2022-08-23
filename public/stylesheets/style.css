@@ -510,6 +510,18 @@ $$  __$$ |$$ |  $$ |$$ |  $$ |$$ |  $$ | $$ |$$\
   margin: 0;
 }
 
+.aaaTeam{
+  display: flex;
+  justify-content: center;
+}
+.aaaTeam > img {
+  width: 50rem;
+  /* border: solid 2px rgb(0, 0, 0); */
+  margin-bottom: 50px;
+  border-radius: 30px;
+  box-shadow: 0 10px 50px rgb(205, 45, 109);
+}
+
 footer {
   display: flex;
   position: relative;
@@ -519,7 +531,10 @@ footer {
   /* Height of the footer*/
   height: 100px;
   border-radius: 50px;
+  display: flex;
+  flex-wrap: wrap;
 }
+
 .logo-contact img {
   width: 100px;
   padding-inline: 20px;
@@ -1123,16 +1138,17 @@ h3 {
   background-color: #2b292b;
   border-radius: 20px;
 
-  padding: 5px;
+  /* margin-inline: 5px; */
   margin-top: 10px;
   /* overflow: auto; */
 
   display: flex;
-  justify-content: space-around;
+  justify-content:space-around;
   min-width: 350px;
 }
 
 .profile-run img {
+  /* height: 100px; */
   height: 90px;
   width: 90px;
   border-radius: 10px;
@@ -1141,11 +1157,20 @@ h3 {
   display: inline;
 }
 
-.profile-run > h4 {
+.profile-run > h3 {
   display: inline;
   /* background-color: red; */
   margin-inline: 5px;
 }
+
+.profile-info-run{
+  font-size: 16px;
+}
+
+#profile-rank, #profile-gameName{
+  padding-top: 0.5em;
+}
+
 
 .userInfo {
   padding-left: 0;
@@ -1159,17 +1184,17 @@ h3 {
   /* border: 2px solid yellow; */
   list-style: none;
 }
-
+/* 
 .profile-run-info {
-  flex-wrap: wrap;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
 .profile-run-info h5 {
   margin: 0px;
   padding-top: 4px;
-  /* background-color: rgb(16, 172, 239); */
+  background-color: rgb(16, 172, 239);
 }
 
 .profile-run-info img {
@@ -1177,10 +1202,12 @@ h3 {
   padding: 5px;
   width: 100px;
   display: inline;
-}
+} */
 
 .fa-youtube {
   color: red;
+  display: inline;
+  padding: 10px;
 }
 
 /* DESKTOP -------------------------------------- */
@@ -1252,6 +1279,24 @@ h3 {
 
   .profile-run{
     margin-inline: 150px;
+    padding: 10px;
+    justify-content:space-around;
+
   }
+
+
+.profile-run img {
+  height: 100px;
+  width: 100px;
+}
+
+.profile-info-run{
+  font-size: 20px;
+}
+
+#profile-rank, #profile-gameName{
+  padding-top: 1.3em;
+}
+
 }
 
