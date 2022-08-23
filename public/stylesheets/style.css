@@ -497,8 +497,11 @@ $$  __$$ |$$ |  $$ |$$ |  $$ |$$ |  $$ | $$ |$$\
 /* ABOUT */
 
 .about {
-  margin: 50px;
+  margin-top: 50px ;
+  margin-inline: 50px;
+  background-color: #161516;
 }
+
 
 .logo-contact {
   text-decoration: none;
@@ -513,14 +516,21 @@ $$  __$$ |$$ |  $$ |$$ |  $$ |$$ |  $$ | $$ |$$\
 .aaaTeam{
   display: flex;
   justify-content: center;
+  /* max-width: 100%;
+  height: auto; */
+  margin-inline: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+flex-wrap: wrap;
 }
-.aaaTeam > img {
+/* .aaaTeam > img {
   width: 50rem;
-  /* border: solid 2px rgb(0, 0, 0); */
+  border: solid 2px rgb(0, 0, 0);
   margin-bottom: 50px;
   border-radius: 30px;
   box-shadow: 0 10px 50px rgb(205, 45, 109);
-}
+} */
 
 footer {
   display: flex;
@@ -553,6 +563,17 @@ footer {
     0 0 90px rgba(250, 0, 196, 0.469), 0 0 100px rgba(250, 0, 196, 0.469),
     0 0 150px rgba(250, 0, 196, 0.469);
 }
+
+
+
+@media (min-width: 900px){
+  .about {
+    margin-inline: 150px;
+  }
+  
+}
+
+
 
 /*                                                       
                                                       
