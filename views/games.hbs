@@ -7,46 +7,48 @@
       /></a>
     Games</h1>
 
-</div>
-
-<ul class="gamesCards">
-      {{#each games}}
-      <li>
-      <a href="#" class="gamesCard">
-        <img
-          src={{cover}}
-          class="gamesCard__image"
-          alt="cover image of {{title}}"
-        />
-        <div class="gamesCard__overlay">
-          <div class="gamesCard__header">
-            <div class="gamesCard__header-text">
-              <h3 class="gamesCard__gameName">{{title}}</h3>
+  </div>
+  <div id="link-add-game">
+    <a href="/game/new">Add a new game</a>
+  </div>
+  <ul class="gamesCards">
+        {{#each games}}
+        <li>
+        <a href="#" class="gamesCard">
+          <img
+            src={{cover}}
+            class="gamesCard__image"
+            alt="cover image of {{title}}"
+          />
+          <div class="gamesCard__overlay">
+            <div class="gamesCard__header">
+              <div class="gamesCard__header-text">
+                <h3 class="gamesCard__gameName">{{title}}</h3>
+              </div>
             </div>
+            <p class="gamesCard__description">
+              {{#each this.categoriesID}}
+                category: {{name}}
+              {{/each}}
+            </p>
           </div>
-          <p class="gamesCard__description">
-            {{#each this.categoriesID}}
-              category: {{name}}
-            {{/each}}
-          </p>
-        </div>
-      </a>
-    </li>
-     {{/each }}
-  
+        </a>
+      </li>
+      {{/each }}
+   </ul>
 
-<!--TEST ALAN -->
-{{!-- <a href="/game/new">Add a new game</a>
- <div> 
-  coucou
-  {{#each games}}
-  <a href={{_id}}>title:{{title}}</a>
-  cover:<img src={{cover}}>
-  {{#each this.categoriesID}}
-  categories:{{name}}
-  {{/each}}
-  {{/each }}
-</div> --}}
-<!--TEST ALAN -->
+  <!--TEST ALAN -->
+  {{!-- <a href="/game/new">Add a new game</a>
+  <div> 
+    coucou
+    {{#each games}}
+    <a href={{_id}}>title:{{title}}</a>
+    cover:<img src={{cover}}>
+    {{#each this.categoriesID}}
+    categories:{{name}}
+    {{/each}}
+    {{/each }}
+  </div> --}}
+  <!--TEST ALAN -->
 
 
