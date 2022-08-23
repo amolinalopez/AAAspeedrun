@@ -115,7 +115,7 @@ router.post("/:id/edit",(req,res,next)=>{
   User.findByIdAndUpdate(id,{name,email,avatar,country},{new:true})
   .then((updatedUser)=>{
     console.log(updatedUser)
-    res.redirect(`/user/${updatedUser._id}`)
+    res.redirect(`/user/${updatedUser._id}`,{user:req.session.currentUser})
   })
   .catch((err)=>{
     console.log('error updating game', err)

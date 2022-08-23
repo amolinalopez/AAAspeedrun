@@ -140,7 +140,7 @@ router.post('/receipt', function (req, res) {
               }
               else if (data) {
                   console.log('\nData of process a payment : ' + JSON.stringify(data));
-                  res.render('receipt', { paymentResponse:  JSON.stringify(data)} );
+                  res.render('receipt', { paymentResponse:  JSON.stringify(data),user:req.session.currentUser} );
           
               }
               console.log('\nResponse of process a payment : ' + JSON.stringify(response));
@@ -156,11 +156,11 @@ router.post('/receipt', function (req, res) {
 
 /* GET payment page */
 router.get("/payment", (req, res, next) => {
-  res.render("payment");
+  res.render("payment",{user:req.session.currentUser});
 });
 
 router.get("/premium", (req, res, next) => {
-  res.render("premium2");
+  res.render("premium2",{user:req.session.currentUser});
 });
 
 

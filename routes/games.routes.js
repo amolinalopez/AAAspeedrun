@@ -13,7 +13,7 @@ router.get("/list", (req, res, next) => {
     .populate("categoriesID")
     .then((gamesFromDB) => {
       //console.log("gamesfromdb:",gamesFromDB)
-      res.render('games', { games: gamesFromDB })
+      res.render('games', { games: gamesFromDB, user:req.session.currentUser })
     })
 
 });
@@ -52,7 +52,7 @@ router.post("/category/:id/newrun",(req,res,next)=>{
   Run.create({userID,time_seconds,video,categoryID:req.params.id})
   .then((createdRun)=>{
     console.log('run created:',createdRun)
-    res.redirect(`/game/category/${createdRun.categoryID}`)
+    res.redirect(`/game/category/${createdRun.categoryID}`,{user:req.session.currentUser})
   })
   .catch((err)=>{
     console.log("err",err)
@@ -69,7 +69,7 @@ router.get("/category/:id", (req, res, next) => {
         .populate("gameID")
         .then((runsFromDB) => {
           console.log("runsFromDB:",runsFromDB)
-          res.render('category', { category: categoryFromDB, runs: runsFromDB })
+          res.render('category', { category: categoryFromDB, runs: runsFromDB, user:req.session.currentUser })
         })
         .catch((err) => {
           console.log('err:', err)
@@ -86,7 +86,7 @@ router.get("/:id/edit", (req, res, next) => {
   Game.findById(req.params.id)
     .populate("categoriesID")
     .then((gameFromDB) => {
-      res.render("game-edit", { game: gameFromDB });
+      res.render("game-edit", { game: gameFromDB, user:req.session.currentUser});
     })
 });
 
@@ -108,7 +108,7 @@ router.post("/:id/edit", (req, res, next) => {
 router.get('/:id/newcategory', function (req, res, next) {
   Game.findById(req.params.id)
     .then((gameFromDB) => {
-      res.render('category-new', { game: gameFromDB })
+      res.render('category-new', { game: gameFromDB, user:req.session.currentUser })
     });
 });
 
@@ -136,7 +136,7 @@ router.get("/:id", (req, res, next) => {
   Game.findById(req.params.id)
     .populate("categoriesID")
     .then((gameFromDB) => {
-      res.render("game", { game: gameFromDB })
+      res.render("game", { game: gameFromDB, user: req.session.currentUser})
     })
 })
 
@@ -144,7 +144,7 @@ router.get("/:id/category", (req, res, next) => {
   Game.findById(req.params.id)
     .populate("categoriesID")
     .then((gameFromDB) => {
-      res.render("game", { game: gameFromDB })
+      res.render("game", { game: gameFromDB, user: req.session.currentUser})
     })
 })
 
