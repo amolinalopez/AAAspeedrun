@@ -15,8 +15,8 @@ module.exports = app => {
   app.use(
     session({
       secret: process.env.SESS_SECRET || 'super session secret',
-      resave: true,
-      saveUninitialized: false,
+      resave: false,
+      saveUninitialized: true,
       cookie: {
         sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
         secure: process.env.NODE_ENV === 'production',
@@ -32,40 +32,3 @@ module.exports = app => {
     })
   );
 };
-
-
-
-
-// const session = require('express-session');
-// const MongoStore = require('connect-mongo');
-// const mongoose = require('mongoose');
-
-// // since we are going to USE this middleware in the app.js,
-
-// // let's export it and have it receive a parameter
-
-// module.exports = app => {
-//     // <== app is just a placeholder here
-//     // but will become a real "app" in the app.js
-//     // when this file gets imported/required there
-
-
-//     app.set('trust proxy', 1);
-//     // use session
-//     app.use(
-//         session({
-//             secret: process.env.SESS_SECRET,
-//             resave: true,
-//             saveUninitialized: false,
-//             cookie: {
-//                 sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
-//                 secure: process.env.NODE_ENV === 'production',
-//                 httpOnly: true,
-//                 maxAge: 60000 // 60 * 1000 ms === 1 min
-//             },
-//             store: MongoStore.create({
-//                 mongoUrl: process.env.MONGODB_URI || 'mongodb://localhost/basic-auth'
-//             })
-//         })
-//     );
-// };
