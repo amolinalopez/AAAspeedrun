@@ -9,8 +9,34 @@
 
 </div>
 
+<ul class="gamesCards">
+      {{#each games}}
+      <li>
+      <a href="#" class="gamesCard">
+        <img
+          src={{cover}}
+          class="gamesCard__image"
+          alt="cover image of {{title}}"
+        />
+        <div class="gamesCard__overlay">
+          <div class="gamesCard__header">
+            <div class="gamesCard__header-text">
+              <h3 class="gamesCard__gameName">{{title}}</h3>
+            </div>
+          </div>
+          <p class="gamesCard__description">
+            {{#each this.categoriesID}}
+              category: {{name}}
+            {{/each}}
+          </p>
+        </div>
+      </a>
+    </li>
+     {{/each }}
+  
+
 <!--TEST ALAN -->
-<a href="/game/new">Add a new game</a>
+{{!-- <a href="/game/new">Add a new game</a>
  <div> 
   coucou
   {{#each games}}
@@ -20,6 +46,7 @@
   categories:{{name}}
   {{/each}}
   {{/each }}
-</div>
+</div> --}}
 <!--TEST ALAN -->
+
 
