@@ -64,17 +64,24 @@
         <button>🔍</button>
       </div>
       <a href="/about">About</a>
-      {{#if user}}
-      <form id="logout-form" action="/user/logout" method="POST">
-        <button>Logout</button>
-      </form>
+
+      {{#if user}}   
+      <form action="/user/${user._id}" id="myProfile-form">
+          <button id="myProfile-btn">My profile ✨</button>
+        </form>
+
+        <form id="logout-form" action="/user/logout" method="POST">
+          <button id="logOut-btn">Log out</button>
+        </form>
+        
+      {{!-- <a href="/user/${user._id}"><button id="myProfile-btn">My profile ✨</button></a --}}
       {{else}}
-      <button>
-        <a href="/user/login">Log In</a>
-      </button>
-      <button>
-        <a href="/user/signup">Sign Up</a>
-      </button>
+        <button>
+          <a href="/user/login">Log In</a>
+        </button>
+        <button>
+          <a href="/user/signup">Sign Up</a>
+        </button>
       {{/if}}
     </div>
 

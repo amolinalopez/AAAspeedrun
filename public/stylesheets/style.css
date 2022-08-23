@@ -156,6 +156,34 @@ input::placeholder {
   top: 0;
 }
 
+#myProfile-btn{
+  color: white;
+  padding: 5px;
+}
+
+#myProfile-btn:hover{
+  background-color:var(--orange) ;
+}
+
+#myProfile-form{
+  margin: 0;
+}
+
+#logOut-btn{
+  color: white;
+  padding: 5px;
+
+}
+
+#logOut-btn:hover{
+  background-color:#694A65 ;
+
+}
+
+#logout-form{
+  margin: 0;
+}
+
 /* CONTAINERS */
 /* .container {
   color: beige;
@@ -1226,3 +1254,4 @@ h3 {
     margin-inline: 150px;
   }
 }
+
