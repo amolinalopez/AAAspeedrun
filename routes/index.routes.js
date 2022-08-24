@@ -26,7 +26,7 @@ router.get("/about", (req, res, next) => {
 
 /* GET error page */
 router.get("/error", (req, res, next) => {
-  res.render("error");
+  res.render("error",{user:req.session.currentUser});
 })
 
 module.exports = router;

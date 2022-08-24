@@ -1,6 +1,7 @@
 const Game = require('../models/Game.model.js')
 const Category = require('../models/Categories.model.js')
 const Run = require('../models/Run.model.js')
+const fileUploader = require('../config/cloudinary.config');
 
 
 const router = require("express").Router();
@@ -17,13 +18,15 @@ router.get("/list", (req, res, next) => {
 
 
 router.get("/new", (req, res, next) => {
-  res.render("game-new")
+  res.render("game-new",{user:req.session.currentUser})
 })
 
-router.post("/new", (req, res, next) => {
-  const { title, year, cover } = req.body
-  Game.create({ title, year, cover })
+router.post("/new", fileUploader.single('cover'), (req, res, next) => {
+  const { title, year } = req.body
+  console.log("req.file",req.file)
+  Game.create({ title, year, cover:req.file.path })
     .then((newGame) => {
+      console.log("newGame",newGame)
       res.redirect(`/game/${newGame._id}`)
     })
     .catch((err) => {
