@@ -859,8 +859,24 @@ $$\   $$ |
 }
 
 #game-details-img {
-  border: red solid;
-  
+  width: 300px;
+}
+
+#game-details-list{
+  list-style: none;
+}
+
+#game-details-links {
+  display: flex;
+  justify-content:space-around;
+  /* border: red solid; */
+  width: 200px;
+
+}
+
+#game-details-links a {
+  color: white;
+  font-size: larger;
 }
 
 

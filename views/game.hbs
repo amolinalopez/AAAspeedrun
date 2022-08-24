@@ -8,9 +8,11 @@
     
     <ul>
     {{#each game.categoriesID}}
-    <li><a href="/game/category/{{_id}}">{{name}}</a></li>
+    <li id="game-details-list"><a href="/game/category/{{_id}}">{{name}}</a></li>
     {{/each}}
     </ul>
+    <div id="game-details-links">
     <a href="/game/{{game._id}}/edit">Edit</a>
     <a href="/game/{{game._id}}/newcategory">New Category</a>
+    </div>
 </div>
