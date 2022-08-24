@@ -1,7 +1,11 @@
 {{!-- game --}}
 <div class="game-details">
-    <img src={{game.cover}}>
-    {{game.title}}
+    <h1>Title : {{game.title}}</h1>
+    <div>
+        <img id="game-details-img" src={{game.cover}}>
+    </div>
+    
+    
     <ul>
     {{#each game.categoriesID}}
     <li><a href="/game/category/{{_id}}">{{name}}</a></li>

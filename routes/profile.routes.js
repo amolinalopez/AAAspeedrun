@@ -13,7 +13,7 @@ router.get("/signup", (req, res, next) => {
   res.render("signup")
 })
 
-router.post("/signup", fileUploader.single('avatar'),(req, res, next) => {
+router.post("/signup", fileUploader.single('avatar'), (req, res, next) => {
   const { username, email, password, confirmPassword } = req.body
   const hashedPassword = bcryptjs.hashSync(password, salt)
   console.log('Hashed Password=', hashedPassword)
@@ -33,7 +33,7 @@ router.post("/signup", fileUploader.single('avatar'),(req, res, next) => {
     return;
   }
   User.create({
-    username, email, password: hashedPassword, avatar:req.file.path
+    username, email, password: hashedPassword, avatar: req.file.path
   })
     .then(userFromDB => {
       console.log('New user created:', userFromDB)
@@ -94,40 +94,46 @@ router.post("/login", (req, res, next) => {
 
 
 router.get("/:id", (req, res, next) => {
-  
-  const user = req.params
-  User.findOne({_id:req.params.id})
-  .then((userfromDB)=>{
-    console.log("userfromDB",userfromDB)
-    Runs
-    .find({ userID: user._id }).sort({ date: -1 })
-    .populate("userID")
-    .populate("categoryID")
-    .populate("gameID")
-    .then((runsfromDB) => {
-      res.render("profile", { user: userfromDB , runs: runsfromDB })
-    });
-  })
-  
+  User.findOne({ _id: req.params.id })
+    .then((userfromDB) => {
+      console.log("userfromDB", userfromDB)
+      Runs.find({ userID: userfromDB._id }).sort({ date: -1 })
+        .populate("userID")
+        .populate("categoryID")
+        .populate("gameID")
+        .then((runsfromDB) => {
+          console.log("runsfromDB", runsfromDB)
+          res.render("profile", { user: userfromDB, runs: runsfromDB })
+        })
+        .catch((err) => {
+          console.log("err", err)
+          next(err)
+        })
+    })
+    .catch((err) => {
+      console.log("err", err)
+      next(err)
+    })
+
 });
 
 router.get("/:id/edit", (req, res, next) => {
   res.render("profile-edit", { user: req.session.currentUser })
 })
 
-router.post("/:id/edit",(req,res,next)=>{
-  const {id} = req.params;
-  const {name,email,avatar,country} = req.body;
-  User.findByIdAndUpdate(id,{name,email,avatar,country},{new:true})
-  .then((updatedUser)=>{
-    console.log(updatedUser)
-    res.redirect(`/user/${updatedUser._id}`,{user:req.session.currentUser})
-  })
-  .catch((err)=>{
-    console.log('error updating game', err)
-    next(err)
-  })
-  
+router.post("/:id/edit", (req, res, next) => {
+  const { id } = req.params;
+  const { name, email, avatar, country } = req.body;
+  User.findByIdAndUpdate(id, { name, email, avatar, country }, { new: true })
+    .then((updatedUser) => {
+      console.log(updatedUser)
+      res.redirect(`/user/${updatedUser._id}`, { user: req.session.currentUser })
+    })
+    .catch((err) => {
+      console.log('error updating game', err)
+      next(err)
+    })
+
 })
 
 router.get("/:id/favorites", (req, res, next) => {

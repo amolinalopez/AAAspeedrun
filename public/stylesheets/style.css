@@ -843,6 +843,24 @@ $$\   $$ |
 .game-details {
   margin-inline: 150px;
   margin-top: 50px;
+  /* display: flex;
+  justify-content:space-around;
+  flex-wrap: wrap; */
+  text-align: center;
+}
+
+.game-details h1 {
+  margin: 50px;
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px rgb(99, 10, 80), 0 0 20px rgb(99, 10, 80),
+  0 0 40px rgb(99, 10, 80), 0 0 80px rgba(250, 0, 196, 0.469),
+  0 0 90px rgba(250, 0, 196, 0.469), 0 0 100px rgba(250, 0, 196, 0.469),
+  0 0 150px rgba(250, 0, 196, 0.469);
+}
+
+#game-details-img {
+  border: red solid;
+  
 }
 
 
