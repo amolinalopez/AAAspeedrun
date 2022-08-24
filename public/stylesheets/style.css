@@ -1088,6 +1088,14 @@ $$ |                \$$$$$$  |
   border: 1px solid rgba(0,0,0,.125);
 
 }
+
+.card2 {
+  position: relative;
+  display: block;
+  height: 570px;
+  border-radius: 30px;
+  overflow: hidden;
+}
 /* 
 
 $$\                          $$$$$$\                  $$$$$$\  $$\                     $$$$$$\           

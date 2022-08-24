@@ -1,19 +1,25 @@
-category-details
-
-{{category.name}}
+<h2>{{category.name}}</h2>
 
 <a href="/game/category/{{category._id}}/newrun">Submit a new run</a>
 {{#if runs}}
-{{#each runs}}
-    <div>
-    <img src={{gameID.cover}}>
-    username:{{userID.username}}
-    time:{{time_seconds}}
-    date:{{date}}
-    video:{{video}}
+    {{#each runs}}
+    <div class="profile-run">
+
+      <img src="{{gameID.cover}}" alt="game speedrun image" />
+
+      {{!-- <h3 id="profile-rank">1</h3> --}}
+      <h3 id="profile-gameName">{{userID.username}}</h3>
+
+      <div>
+        <h3 class="profile-info-run">{{time_seconds}} </h3>
+        <h3 class="profile-info-run">{{categoryID.name}}</h3>
+      </div>
+      <div>
+        <h3 class="profile-info-run">{{date}}</h3>
+        <a href="{{video}}"><span> <i class="fab fa-youtube fa-lg"></i></span></a>
+      </div>
     </div>
-    
-{{/each}}
+    {{/each}}
 {{else}}
 <p>No runs registered for this category yet</p>
 {{/if}}
