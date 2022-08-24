@@ -1,24 +1,29 @@
-game-new
+{{!-- game-new --}}
+<div class="game-new">
+  <h2 id="addGameTitle">
+    Add a new game
+  </h2>
 
-<h2>Add a new game</h2>
- 
-<form action="/game/new" method="POST">
-  <label>
-    Title:
-    <input type="text" name="title" />
-  </label>
-  
- 
-  <label>
-    Year:
-    <input type="number" name="year" />
-  </label>
-  
- 
-  <label>
-    Cover:
-    <input type="text" name="cover"></input>
-  </label>
+  <div id="newGame-card" >
+    <form action="/game/new" method="POST" class="newGame-center-wrap">
+      <label>Title:</label>
+        <input type="text" name="title" placeholder="Game title"
+ />
+      
+      
+      <label>Year:</label>
+        <input type="number" name="year" min="1980" max="2022" placeholder="Release date" />
+      
+    
+      <label> Cover: </label>
+        <input type="file" name="cover" placeholder="Image of game cover"></input>
+    
 
-  <button type="submit">Create</button>
-</form>
+      <button type="submit" id="newGame-submit-btn">Create</button>
+    </form>
+  </div>
+  </div>
+
+
+
+      
