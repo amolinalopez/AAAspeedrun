@@ -17,9 +17,8 @@
           <div class="center-wrap">
             <h3>Welcome back!</h3>
             <div class="btn googleAuth-btn">
-              <a href="#notArouteYET"><img
-                  src="https://d3ptyyxy2at9ui.cloudfront.net/google-32ae27.svg"
-                />Log in with Google</a>
+              <a href="#notArouteYET"><img src="https://d3ptyyxy2at9ui.cloudfront.net/google-32ae27.svg" />Log in with
+                Google</a>
             </div>
 
             <div class="ligneGoogle">
@@ -28,18 +27,10 @@
 
             <form method="POST" action="/user/login">
               <label>E-mail <i class="fas fa-at"> </i></label>
-              <input
-                type="string"
-                name="email"
-                placeholder="Your email adress"
-              />
+              <input type="string" name="email" placeholder="Your email adress" />
 
               <label>Password</label>
-              <input
-                type="password"
-                name="password"
-                placeholder="Your password"
-              />
+              <input type="password" name="password" placeholder="Your password" />
               <a class="pwd-reset-link" href="#notArouteYET">Oops, I forgot my
                 password 😅</a>
 
@@ -53,50 +44,41 @@
         <div class="card-signUp">
           <div class="center-wrap">
             <div class="btn googleAuth-btn">
-              <a href="#notArouteYET"><img
-                  src="https://d3ptyyxy2at9ui.cloudfront.net/google-32ae27.svg"
-                />Sign up with Google</a>
+              <a href="#notArouteYET"><img src="https://d3ptyyxy2at9ui.cloudfront.net/google-32ae27.svg" />Sign up with
+                Google</a>
             </div>
 
             <div class="ligneGoogle">
               <div>or</div>
             </div>
 
-            <form method="POST" action="/user/signup">
+            <form method="POST" action="/user/signup" enctype="multipart/form-data">
               <label>Username</label>
-              <input
-                type="string"
-                name="username"
-                placeholder="Your username"
-              />
+              <input type="string" name="username" placeholder="Your username" />
 
               <label>E-mail <i class="fas fa-at"> </i></label>
               <input type="email" name="email" placeholder="Your e-mail" />
 
-              
+
               <label>Password</label>
-              
-              <input
-                type="password"
-                name="password"
-                placeholder="Your password"
-                id="typedPwd"
-              />              
-              <button id="show-pwd-btn" type="button" onclick="MyPwdShow()"; >Show <i id="eyeToggle" class="fas fa-eye"></i>
+
+              <input type="password" name="password" placeholder="Your password" id="typedPwd" />
+              <button id="show-pwd-btn" type="button" onclick="MyPwdShow()" ;>Show <i id="eyeToggle"
+                  class="fas fa-eye"></i>
               </button>
-              
+
 
               <label>Confirm password</label>
-              <input
-                type="password"
-                name="confirmPassword"
-                placeholder="Confirm password"
-              />
+              <input type="password" name="confirmPassword" placeholder="Confirm password" />
+
+              <label> Avatar:
+                <input type="file" name="avatar" placeholder="Image of user's avatar"></input>
+              </label>
 
               <button class="btn auth-btn" type="submit">Sign up</button>
 
               {{#if errorMessage}}
-                <p>{{errorMessage}}</p>
+              <p>{{errorMessage}}</p>
               {{/if}}
 
             </form>
@@ -105,5 +87,5 @@
       </div>
     </div>
   </div>
-  
+
 </div>

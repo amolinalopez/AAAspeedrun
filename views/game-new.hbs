@@ -4,26 +4,22 @@
     Add a new game
   </h2>
 
-  <div id="newGame-card" >
+  <div id="newGame-card">
     <form action="/game/new" method="POST" enctype="multipart/form-data" class="newGame-center-wrap">
-      <label>Title:</label>
-        <input type="text" name="title" placeholder="Game title"
- />
-      
-      
-      <label>Year:</label>
+      <label>Title:
+        <input type="text" name="title" placeholder="Game title" />
+      </label>
+
+
+      <label>Year:
         <input type="number" name="year" min="1980" max="2022" placeholder="Release date" />
-      
-    
-      <label> Cover: </label>
-        <input type="file" name="cover" placeholder="Image of game cover"></input>
-    
+      </label>
+
+      <label> Cover:
+      <input type="file" name="cover" placeholder="Image of game cover"></input>
+      </label>
 
       <button type="submit" id="newGame-submit-btn">Create</button>
     </form>
   </div>
-  </div>
-
-
-
-      
+</div>

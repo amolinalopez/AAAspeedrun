@@ -1,347 +1,336 @@
 <!--TEST ALAN -->
- {{!-- <div> 
+{{!-- <div>
   name:{{user.username}}
   coins:{{user.coins}}
   premium:{{#if user.premium}}
-        yes
-        {{/if}}
-    email:{{user.email}}
-   avatar: <img src={{user.avatar}}>
-    country:{{user.country}}
+  yes
+  {{/if}}
+  email:{{user.email}}
+  avatar: <img src={{user.avatar}}>
+  country:{{user.country}}
 </div>
 <a href="/user/{{user._id}}/edit">Edit Profile</a>
 <div>
-    {{#each runs}}
-    /////////////
-    time:{{time_seconds}}
-    date:{{date}}
-    video:{{video}}
-    category:{{categoryID.name}}
-    game:{{gameID.title}}
-    //////////////
-{{/each}}    
+  {{#each runs}}
+  /////////////
+  time:{{time_seconds}}
+  date:{{date}}
+  video:{{video}}
+  category:{{categoryID.name}}
+  game:{{gameID.title}}
+  //////////////
+  {{/each}}
 </div> --}}
 <!--TEST ALAN -->
 
 <div class="profile-page">
 
   <section class="userSection">
-    <div class="flex-child one" >
-      <img
-        class="profile-userImg"
-        src="{{user.avatar}}"
-        alt="User image"
-      />     
+    <div class="flex-child one">
+      <img class="profile-userImg" src="{{user.avatar}}" alt="User image" />
     </div>
     <div class="flex-child two">
-        
-        <h1>
-          <span id="greetings">
-          </span>
-          {{user.username}}
-        </h1>
-       <ul class="userInfo">
-         <li>{{user.coins}} coins</li>
-         <li>{{user.country}}</li>
-         <li>Premium: 
-            {{#if user.premium}} Yes 🏅 
-            {{else}} No 🈚️
-            {{/if}} 
-         </li>
-       </ul>
-        
-    </div>
-     
-    </div>
-  </section>
 
-  <section class="profile-user-runs">
-    <div class="profile-run">
-
-      <img
-        src="https://res.cloudinary.com/dsbxyd6o2/image/upload/v1659370122/Stray-game_lmlvqd.jpg"
-        alt="game speedrun image"
-      />
-      
-      <h3 id="profile-rank">1</h3>
-      <h3 id="profile-gameName">Stray </h3>
-
-      {{!-- <div class="profile-run-info"> --}}
-        <div>
-           <h3 class="profile-info-run">0:49:18 </h3>
-          <h3 class="profile-info-run">Unrestricted</h3>
-        </div>
-        <div>
-          <h3 class="profile-info-run">5/7/21</h3>
-          <span> <i class="fab fa-youtube fa-lg"></i></span>
-        </div>
-        {{!-- <h5>01:31:18 </h5>
-        <h5>Category</h5>
-        <h5>05/04/2021</h5>
-        <h5> <i class="fab fa-youtube fa-lg"></i></h5> --}}
-      {{!-- </div> --}}
+      <h1>
+        <span id="greetings">
+        </span>
+        {{user.username}}
+      </h1>
+      <ul class="userInfo">
+        <li>{{user.coins}} coins</li>
+        <li>{{user.country}}</li>
+        <li>Premium:
+          {{#if user.premium}} Yes 🏅
+          {{else}} No 🈚️
+          {{/if}}
+        </li>
+      </ul>
 
     </div>
 
+</div>
+</section>
 
-    
-      
-    </div>
+<!--TEST ALAN -->
+<div>
+  Demo ALAN:
+  {{#each runs}}
+  /////////////
+  time:{{time_seconds}}
+  date:{{date}}
+  video:{{video}}
+  category:{{categoryID.name}}
+  game:{{gameID.title}}
+  //////////////
+  {{/each}}
+</div>
+<!--TEST ALAN -->
 
-    <div class="profile-run">
-      <img
-        src="https://res.cloudinary.com/dsbxyd6o2/image/upload/v1661279128/60ae4_oxfzpg.jpg"
-        alt="game speedrun image"
-      />
-      
-      <h3 id="profile-rank">9</h3>
-      <h3 id="profile-gameName">Valorant</h3>
+<section class="profile-user-runs">
+  <div class="profile-run">
 
-        <div>
-           <h3 class="profile-info-run">0:01:50 </h3>
-          <h3 class="profile-info-run">Hard</h3>
-        </div>
-        <div>
-          <h3 class="profile-info-run">17/2/18</h3>
-          <span> <i class="fab fa-youtube fa-lg"></i></span>
-        </div>
-      
-    </div>
+    <img src="https://res.cloudinary.com/dsbxyd6o2/image/upload/v1659370122/Stray-game_lmlvqd.jpg"
+      alt="game speedrun image" />
+
+    <h3 id="profile-rank">1</h3>
+    <h3 id="profile-gameName">Stray </h3>
+
+    {{!-- <div class="profile-run-info"> --}}
+      <div>
+        <h3 class="profile-info-run">0:49:18 </h3>
+        <h3 class="profile-info-run">Unrestricted</h3>
+      </div>
+      <div>
+        <h3 class="profile-info-run">5/7/21</h3>
+        <span> <i class="fab fa-youtube fa-lg"></i></span>
+      </div>
+      {{!-- <h5>01:31:18 </h5>
+      <h5>Category</h5>
+      <h5>05/04/2021</h5>
+      <h5> <i class="fab fa-youtube fa-lg"></i></h5> --}}
+      {{!--
+    </div> --}}
+
+  </div>
 
 
-   
-    
-    
+
+
+  </div>
 
   <div class="profile-run">
-      <img
-        src="https://res.cloudinary.com/dsbxyd6o2/image/upload/v1661279475/Zelda-carr_C3_A9_cae69t.jpg"
-        alt="game speedrun image"
-      />
-      
-      <h3 id="profile-rank">12</h3>
-      <h3 id="profile-gameName">Zelda</h3>
+    <img src="https://res.cloudinary.com/dsbxyd6o2/image/upload/v1661279128/60ae4_oxfzpg.jpg"
+      alt="game speedrun image" />
 
-        <div>
-           <h3 class="profile-info-run">3:55:46 </h3>
-          <h3 class="profile-info-run">Any %</h3>
-        </div>
-        <div>
-          <h3 class="profile-info-run">30/6/22</h3>
-          <span> <i class="fab fa-youtube fa-lg"></i></span>
-        </div>
+    <h3 id="profile-rank">9</h3>
+    <h3 id="profile-gameName">Valorant</h3>
+
+    <div>
+      <h3 class="profile-info-run">0:01:50 </h3>
+      <h3 class="profile-info-run">Hard</h3>
+    </div>
+    <div>
+      <h3 class="profile-info-run">17/2/18</h3>
+      <span> <i class="fab fa-youtube fa-lg"></i></span>
     </div>
 
-
- <div class="profile-run">
-      <img
-        src="https://res.cloudinary.com/dsbxyd6o2/image/upload/v1661280052/9JK0IXf58FcO8j042tvdIUNlbQdvUNN6_atf2zg.jpg"
-        alt="game speedrun image"
-      />
-      
-      <h3 id="profile-rank">212</h3>
-      <h3 id="profile-gameName">Minecraft</h3>
-
-        <div>
-           <h3 class="profile-info-run">0:01:20 </h3>
-          <h3 class="profile-info-run"> Bedrock</h3>
-        </div>
-        <div>
-          <h3 class="profile-info-run">21/8/22</h3>
-          <span> <i class="fab fa-youtube fa-lg"></i></span>
-        </div>
-      </div>
+  </div>
 
 
-    <div class="profile-run">
-      <img
-        src="https://res.cloudinary.com/dsbxyd6o2/image/upload/v1661279243/e0c615124190204a30c15a2e8f0aa529_b6xxa0.jpg"
-        alt="game speedrun image"
-      />
-      
-      <h3 id="profile-rank">34</h3>
-      <h3 id="profile-gameName">Hollow Knight</h3>
-
-        <div>
-           <h3 class="profile-info-run">0:38:52 </h3>
-          <h3 class="profile-info-run">Any %</h3>
-        </div>
-        <div>
-          <h3 class="profile-info-run">08/11/21</h3>
-          <span> <i class="fab fa-youtube fa-lg"></i></span>
-        </div>
-    </div>
 
 
-    <div class="profile-run">
-      <img
-        src="http://res.cloudinary.com/dsbxyd6o2/image/upload/v1661278677/Super-Mario-64_ozyzbe.jpg"
-        alt="game speedrun image"
-      />
-      
-      <h3 id="profile-rank">52</h3>
-      <h3 id="profile-gameName">Super Mario 64 </h3>
 
-        <div>
-           <h3 class="profile-info-run">1:37:50 </h3>
-          <h3 class="profile-info-run">120 Stars</h3>
-        </div>
-        <div>
-          <h3 class="profile-info-run">03/7/22</h3>
-          <span> <i class="fab fa-youtube fa-lg"></i></span>
-        </div>
-      
-    </div>
-
-
-<div class="profile-run">
-
-      <img
-        src="https://res.cloudinary.com/dsbxyd6o2/image/upload/v1659370122/Stray-game_lmlvqd.jpg"
-        alt="game speedrun image"
-      />
-      
-      <h3 id="profile-rank">1</h3>
-      <h3 id="profile-gameName">Stray </h3>
-
-      {{!-- <div class="profile-run-info"> --}}
-        <div>
-           <h3 class="profile-info-run">0:49:18 </h3>
-          <h3 class="profile-info-run">Unrestricted</h3>
-        </div>
-        <div>
-          <h3 class="profile-info-run">5/7/21</h3>
-          <span> <i class="fab fa-youtube fa-lg"></i></span>
-        </div>
-        {{!-- <h5>01:31:18 </h5>
-        <h5>Category</h5>
-        <h5>05/04/2021</h5>
-        <h5> <i class="fab fa-youtube fa-lg"></i></h5> --}}
-      {{!-- </div> --}}
-
-    </div>
-
-
-    
-      
-    </div>
-
-    <div class="profile-run">
-      <img
-        src="https://res.cloudinary.com/dsbxyd6o2/image/upload/v1661279128/60ae4_oxfzpg.jpg"
-        alt="game speedrun image"
-      />
-      
-      <h3 id="profile-rank">9</h3>
-      <h3 id="profile-gameName">Valorant</h3>
-
-        <div>
-           <h3 class="profile-info-run">0:01:50 </h3>
-          <h3 class="profile-info-run">Hard</h3>
-        </div>
-        <div>
-          <h3 class="profile-info-run">17/2/18</h3>
-          <span> <i class="fab fa-youtube fa-lg"></i></span>
-        </div>
-      
-    </div>
-
-
-   
-    
-    
 
   <div class="profile-run">
-      <img
-        src="https://res.cloudinary.com/dsbxyd6o2/image/upload/v1661279475/Zelda-carr_C3_A9_cae69t.jpg"
-        alt="game speedrun image"
-      />
-      
-      <h3 id="profile-rank">12</h3>
-      <h3 id="profile-gameName">Zelda</h3>
+    <img src="https://res.cloudinary.com/dsbxyd6o2/image/upload/v1661279475/Zelda-carr_C3_A9_cae69t.jpg"
+      alt="game speedrun image" />
 
-        <div>
-           <h3 class="profile-info-run">3:55:46 </h3>
-          <h3 class="profile-info-run">Any %</h3>
-        </div>
-        <div>
-          <h3 class="profile-info-run">30/6/22</h3>
-          <span> <i class="fab fa-youtube fa-lg"></i></span>
-        </div>
+    <h3 id="profile-rank">12</h3>
+    <h3 id="profile-gameName">Zelda</h3>
+
+    <div>
+      <h3 class="profile-info-run">3:55:46 </h3>
+      <h3 class="profile-info-run">Any %</h3>
+    </div>
+    <div>
+      <h3 class="profile-info-run">30/6/22</h3>
+      <span> <i class="fab fa-youtube fa-lg"></i></span>
+    </div>
+  </div>
+
+
+  <div class="profile-run">
+    <img src="https://res.cloudinary.com/dsbxyd6o2/image/upload/v1661280052/9JK0IXf58FcO8j042tvdIUNlbQdvUNN6_atf2zg.jpg"
+      alt="game speedrun image" />
+
+    <h3 id="profile-rank">212</h3>
+    <h3 id="profile-gameName">Minecraft</h3>
+
+    <div>
+      <h3 class="profile-info-run">0:01:20 </h3>
+      <h3 class="profile-info-run"> Bedrock</h3>
+    </div>
+    <div>
+      <h3 class="profile-info-run">21/8/22</h3>
+      <span> <i class="fab fa-youtube fa-lg"></i></span>
+    </div>
+  </div>
+
+
+  <div class="profile-run">
+    <img src="https://res.cloudinary.com/dsbxyd6o2/image/upload/v1661279243/e0c615124190204a30c15a2e8f0aa529_b6xxa0.jpg"
+      alt="game speedrun image" />
+
+    <h3 id="profile-rank">34</h3>
+    <h3 id="profile-gameName">Hollow Knight</h3>
+
+    <div>
+      <h3 class="profile-info-run">0:38:52 </h3>
+      <h3 class="profile-info-run">Any %</h3>
+    </div>
+    <div>
+      <h3 class="profile-info-run">08/11/21</h3>
+      <span> <i class="fab fa-youtube fa-lg"></i></span>
+    </div>
+  </div>
+
+
+  <div class="profile-run">
+    <img src="http://res.cloudinary.com/dsbxyd6o2/image/upload/v1661278677/Super-Mario-64_ozyzbe.jpg"
+      alt="game speedrun image" />
+
+    <h3 id="profile-rank">52</h3>
+    <h3 id="profile-gameName">Super Mario 64 </h3>
+
+    <div>
+      <h3 class="profile-info-run">1:37:50 </h3>
+      <h3 class="profile-info-run">120 Stars</h3>
+    </div>
+    <div>
+      <h3 class="profile-info-run">03/7/22</h3>
+      <span> <i class="fab fa-youtube fa-lg"></i></span>
     </div>
 
+  </div>
 
- <div class="profile-run">
-      <img
-        src="https://res.cloudinary.com/dsbxyd6o2/image/upload/v1661280052/9JK0IXf58FcO8j042tvdIUNlbQdvUNN6_atf2zg.jpg"
-        alt="game speedrun image"
-      />
-      
-      <h3 id="profile-rank">212</h3>
-      <h3 id="profile-gameName">Minecraft</h3>
 
-        <div>
-           <h3 class="profile-info-run">0:01:20 </h3>
-          <h3 class="profile-info-run"> Bedrock</h3>
-        </div>
-        <div>
-          <h3 class="profile-info-run">21/8/22</h3>
-          <span> <i class="fab fa-youtube fa-lg"></i></span>
-        </div>
+  <div class="profile-run">
+
+    <img src="https://res.cloudinary.com/dsbxyd6o2/image/upload/v1659370122/Stray-game_lmlvqd.jpg"
+      alt="game speedrun image" />
+
+    <h3 id="profile-rank">1</h3>
+    <h3 id="profile-gameName">Stray </h3>
+
+    {{!-- <div class="profile-run-info"> --}}
+      <div>
+        <h3 class="profile-info-run">0:49:18 </h3>
+        <h3 class="profile-info-run">Unrestricted</h3>
       </div>
+      <div>
+        <h3 class="profile-info-run">5/7/21</h3>
+        <span> <i class="fab fa-youtube fa-lg"></i></span>
+      </div>
+      {{!-- <h5>01:31:18 </h5>
+      <h5>Category</h5>
+      <h5>05/04/2021</h5>
+      <h5> <i class="fab fa-youtube fa-lg"></i></h5> --}}
+      {{!--
+    </div> --}}
+
+  </div>
 
 
-    <div class="profile-run">
-      <img
-        src="https://res.cloudinary.com/dsbxyd6o2/image/upload/v1661279243/e0c615124190204a30c15a2e8f0aa529_b6xxa0.jpg"
-        alt="game speedrun image"
-      />
-      
-      <h3 id="profile-rank">34</h3>
-      <h3 id="profile-gameName">Hollow Knight</h3>
 
-        <div>
-           <h3 class="profile-info-run">0:38:52 </h3>
-          <h3 class="profile-info-run">Any %</h3>
-        </div>
-        <div>
-          <h3 class="profile-info-run">08/11/21</h3>
-          <span> <i class="fab fa-youtube fa-lg"></i></span>
-        </div>
+
+  </div>
+
+  <div class="profile-run">
+    <img src="https://res.cloudinary.com/dsbxyd6o2/image/upload/v1661279128/60ae4_oxfzpg.jpg"
+      alt="game speedrun image" />
+
+    <h3 id="profile-rank">9</h3>
+    <h3 id="profile-gameName">Valorant</h3>
+
+    <div>
+      <h3 class="profile-info-run">0:01:50 </h3>
+      <h3 class="profile-info-run">Hard</h3>
+    </div>
+    <div>
+      <h3 class="profile-info-run">17/2/18</h3>
+      <span> <i class="fab fa-youtube fa-lg"></i></span>
     </div>
 
+  </div>
 
-    <div class="profile-run">
-      <img
-        src="http://res.cloudinary.com/dsbxyd6o2/image/upload/v1661278677/Super-Mario-64_ozyzbe.jpg"
-        alt="game speedrun image"
-      />
-      
-      <h3 id="profile-rank">52</h3>
-      <h3 id="profile-gameName">Super Mario 64 </h3>
 
-        <div>
-           <h3 class="profile-info-run">1:37:50 </h3>
-          <h3 class="profile-info-run">120 Stars</h3>
-        </div>
-        <div>
-          <h3 class="profile-info-run">03/7/22</h3>
-          <span> <i class="fab fa-youtube fa-lg"></i></span>
-        </div>
-      
+
+
+
+
+  <div class="profile-run">
+    <img src="https://res.cloudinary.com/dsbxyd6o2/image/upload/v1661279475/Zelda-carr_C3_A9_cae69t.jpg"
+      alt="game speedrun image" />
+
+    <h3 id="profile-rank">12</h3>
+    <h3 id="profile-gameName">Zelda</h3>
+
+    <div>
+      <h3 class="profile-info-run">3:55:46 </h3>
+      <h3 class="profile-info-run">Any %</h3>
+    </div>
+    <div>
+      <h3 class="profile-info-run">30/6/22</h3>
+      <span> <i class="fab fa-youtube fa-lg"></i></span>
+    </div>
+  </div>
+
+
+  <div class="profile-run">
+    <img src="https://res.cloudinary.com/dsbxyd6o2/image/upload/v1661280052/9JK0IXf58FcO8j042tvdIUNlbQdvUNN6_atf2zg.jpg"
+      alt="game speedrun image" />
+
+    <h3 id="profile-rank">212</h3>
+    <h3 id="profile-gameName">Minecraft</h3>
+
+    <div>
+      <h3 class="profile-info-run">0:01:20 </h3>
+      <h3 class="profile-info-run"> Bedrock</h3>
+    </div>
+    <div>
+      <h3 class="profile-info-run">21/8/22</h3>
+      <span> <i class="fab fa-youtube fa-lg"></i></span>
+    </div>
+  </div>
+
+
+  <div class="profile-run">
+    <img src="https://res.cloudinary.com/dsbxyd6o2/image/upload/v1661279243/e0c615124190204a30c15a2e8f0aa529_b6xxa0.jpg"
+      alt="game speedrun image" />
+
+    <h3 id="profile-rank">34</h3>
+    <h3 id="profile-gameName">Hollow Knight</h3>
+
+    <div>
+      <h3 class="profile-info-run">0:38:52 </h3>
+      <h3 class="profile-info-run">Any %</h3>
+    </div>
+    <div>
+      <h3 class="profile-info-run">08/11/21</h3>
+      <span> <i class="fab fa-youtube fa-lg"></i></span>
+    </div>
+  </div>
+
+
+  <div class="profile-run">
+    <img src="http://res.cloudinary.com/dsbxyd6o2/image/upload/v1661278677/Super-Mario-64_ozyzbe.jpg"
+      alt="game speedrun image" />
+
+    <h3 id="profile-rank">52</h3>
+    <h3 id="profile-gameName">Super Mario 64 </h3>
+
+    <div>
+      <h3 class="profile-info-run">1:37:50 </h3>
+      <h3 class="profile-info-run">120 Stars</h3>
+    </div>
+    <div>
+      <h3 class="profile-info-run">03/7/22</h3>
+      <span> <i class="fab fa-youtube fa-lg"></i></span>
     </div>
 
-    
-      
+  </div>
 
 
 
-    
-    
 
-   
-  
-  </section>
+
+
+
+
+
+
+
+</section>
 
 </div>
 

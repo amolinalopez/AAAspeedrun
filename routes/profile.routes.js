@@ -5,6 +5,7 @@ const User = require("../models/User.model");
 const saltRounds = 10;
 const salt = bcryptjs.genSaltSync(saltRounds)
 const regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+const fileUploader = require('../config/cloudinary.config');
 
 
 /* GET signup page */
@@ -12,7 +13,7 @@ router.get("/signup", (req, res, next) => {
   res.render("signup")
 })
 
-router.post("/signup", (req, res, next) => {
+router.post("/signup", fileUploader.single('avatar'),(req, res, next) => {
   const { username, email, password, confirmPassword } = req.body
   const hashedPassword = bcryptjs.hashSync(password, salt)
   console.log('Hashed Password=', hashedPassword)
@@ -32,11 +33,11 @@ router.post("/signup", (req, res, next) => {
     return;
   }
   User.create({
-    username, email, password: hashedPassword
+    username, email, password: hashedPassword, avatar:req.file.path
   })
     .then(userFromDB => {
       console.log('New user created:', userFromDB)
-      res.render('signup')
+      res.redirect('/user/login')
     })
     .catch(err => {
       console.log("err:", err)
