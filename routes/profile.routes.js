@@ -94,16 +94,21 @@ router.post("/login", (req, res, next) => {
 
 
 router.get("/:id", (req, res, next) => {
-  console.log("user:", req.session.currentUser)
-  const user = req.session.currentUser
-  Runs
+  
+  const user = req.params
+  User.findOne({_id:req.params.id})
+  .then((userfromDB)=>{
+    console.log("userfromDB",userfromDB)
+    Runs
     .find({ userID: user._id }).sort({ date: -1 })
     .populate("userID")
     .populate("categoryID")
     .populate("gameID")
     .then((runsfromDB) => {
-      res.render("profile", { user: req.session.currentUser, runs: runsfromDB })
+      res.render("profile", { user: userfromDB , runs: runsfromDB })
     });
+  })
+  
 });
 
 router.get("/:id/edit", (req, res, next) => {

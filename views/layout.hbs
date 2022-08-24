@@ -60,8 +60,10 @@
         <img src="/images/medal.svg" alt="premium Subscribe" width="40px" />
       </a>
       <div>
-        <input type="search" placeholder="search here" />
-        <button>🔍</button>
+        <form action="/search" method="get">
+        <input type="text" name="search" placeholder="search here" />
+        <button type="submit">🔍</button>
+        </form>
       </div>
       <a href="/about">About</a>
 
@@ -73,8 +75,7 @@
         <form id="logout-form" action="/user/logout" method="POST">
           <button id="logOut-btn">Log out</button>
         </form>
-        
-      {{!-- <a href="/user/${user._id}"><button id="myProfile-btn">My profile ✨</button></a --}}
+      
       {{else}}
         <button>
           <a href="/user/login">Log In</a>
