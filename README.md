@@ -1,3 +1,3 @@
 # AAAspeedrun
 
-aaaspeedrun.herokuapp.com
+https://aaaspeedrun.herokuapp.com/
